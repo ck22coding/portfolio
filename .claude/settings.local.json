@@ -9,7 +9,9 @@
       "Bash(git push)",
       "Bash(quarto render:*)",
       "Bash(setx PATH \"%PATH%;C:\\\\Users\\\\carte\\\\AppData\\\\Local\\\\Programs\\\\Quarto\\\\bin\")",
-      "Bash(\"C:\\\\Users\\\\carte\\\\AppData\\\\Local\\\\Programs\\\\Quarto\\\\bin\\\\quarto.exe\" render)"
+      "Bash(\"C:\\\\Users\\\\carte\\\\AppData\\\\Local\\\\Programs\\\\Quarto\\\\bin\\\\quarto.exe\" render)",
+      "Bash(powershell -Command:*)",
+      "Bash(vercel:*)"
     ]
   }
 }

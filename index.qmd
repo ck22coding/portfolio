@@ -17,12 +17,4 @@ title: "Carter King | Product Portfolio"
 
 :::
 
-## Featured Projects
-
-::: {.g-col-12 .g-col-md-6 .card}
-
-### [Problem Tracker](projects/project-1.qmd)
-Track daily pain-points and rate them by frequency and customer willingness-to-pay to identify the best problems worth solving.
-
-:::
 
