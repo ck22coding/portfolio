@@ -1,6 +1,6 @@
 # Quarto
 /.quarto/
-/_site/
+# /_site/  # Commented out to allow Vercel deployment
 /_book/
 /.quarto_cache/
 
@@ -69,3 +69,4 @@ $RECYCLE.BIN/
 # Temporary files
 *.tmp
 *.temp
+**/*.quarto_ipynb
