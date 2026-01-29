@@ -8,10 +8,8 @@ website:
   navbar:
     background: primary
     left:
-      - href: index.qmd
-        text: Home
       - href: about.qmd
-        text: About
+        text: Home
       - href: problems.qmd
         text: Problems
       - href: projects/project-1.qmd
