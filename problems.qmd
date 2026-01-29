@@ -1,0 +1,55 @@
+---
+title: "Problems I'm Exploring"
+---
+
+I approach problems as opportunities. These are real challenges I've observed or experienced—each one represents a gap between how things are and how they could be. I'm documenting them not just to remember them, but to think more deeply about which ones are worth solving.
+
+---
+
+## 1. Accessing Historical Data and Financials
+
+**The Problem:** Finding reliable, comprehensive historical business and financial data is surprisingly difficult. Whether researching a company's past performance, analyzing market trends, or building financial models, the data is often fragmented, paywalled, or inconsistent.
+
+**Why It Matters to Me:** As a Strategic Management student, data-driven decision making is essential. Without accessible historical data, we're forced to make important decisions with incomplete information.
+
+**The Opportunity:** A solution that aggregates and standardizes historical financial data could empower students, entrepreneurs, and analysts to make better-informed decisions.
+
+---
+
+## 2. Choosing How We Consume Media
+
+**The Problem:** We're overwhelmed with media options—streaming services, social platforms, podcasts, news outlets—while algorithms increasingly decide what we see. The paradox of choice combined with algorithmic curation means we often consume passively rather than intentionally.
+
+**Why It Matters to Me:** Media shapes how we learn, what we believe, and how we spend our time. Taking control of media consumption is taking control of personal growth.
+
+**The Opportunity:** Tools or frameworks that help people consume media more intentionally could improve learning outcomes and reduce digital overwhelm.
+
+---
+
+## 3. Inefficient Road and Pedestrian Intersections
+
+**The Problem:** Traffic intersections are often poorly optimized for both vehicles and pedestrians. Long wait times, unsafe crossings, and inefficient signal timing waste time and create safety hazards.
+
+**Why It Matters to Me:** I experience this daily. Minutes lost at poorly timed lights add up, and I've witnessed near-misses that could have been prevented with better design.
+
+**The Opportunity:** Smart intersection technology, better urban planning, or even simple timing optimizations could improve safety and save millions of collective hours.
+
+---
+
+## 4. Outsourcing Learning to AI
+
+**The Problem:** AI tools can now answer questions, write essays, and solve problems instantly. While powerful, this creates a temptation to outsource thinking rather than develop genuine understanding and skills.
+
+**Why It Matters to Me:** As a student learning to use AI effectively, I constantly navigate the line between leveraging AI as a tool and using it as a crutch. The skills I don't develop now will be gaps later.
+
+**The Opportunity:** Frameworks, tools, or educational approaches that help people use AI to enhance learning—rather than replace it—could be transformative for education.
+
+---
+
+## 5. Imposter Syndrome
+
+**The Problem:** Many capable people consistently doubt their abilities and fear being exposed as frauds, despite evidence of their competence. This self-doubt holds people back from opportunities and diminishes their contributions.
+
+**Why It Matters to Me:** I've experienced this firsthand—questioning whether I belong or whether my ideas are valuable. It's a barrier that affects performance and well-being.
+
+**The Opportunity:** Better understanding of imposter syndrome's causes and practical strategies for overcoming it could unlock potential for countless students and professionals.

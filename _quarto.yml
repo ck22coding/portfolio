@@ -3,8 +3,8 @@ project:
   output-dir: _site
 
 website:
-  title: ""
-  favicon: images/prototyping-favicon.png
+  title: "Carter King"
+  favicon: images/favicon.png
   navbar:
     background: primary
     left:
@@ -12,10 +12,12 @@ website:
         text: Home
       - href: about.qmd
         text: About
+      - href: problems.qmd
+        text: Problems
       - text: Projects
         menu:
           - href: projects/project-1.qmd
-            text: Name of my first app
+            text: Problem Tracker
           #- href: projects/project-2.qmd
           #  text: Business Case Presentation
           #- href: projects/project-3.qmd

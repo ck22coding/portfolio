@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(ls \"C:\\\\Users\\\\carte\\\\OneDrive\\\\Desktop\\\\AIheadshot\"*)",
+      "Bash(ls:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nCustomized portfolio template for Carter King\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
+    ]
+  }
+}
