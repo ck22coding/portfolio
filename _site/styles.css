@@ -1,247 +1,731 @@
-/* Custom styles for portfolio website */
+/* ═══════════════════════════════════════════════════════════════
+   FUTURISTIC MINIMAL PORTFOLIO
+   Neo-minimal design with electric cyan accents
+   ═══════════════════════════════════════════════════════════════ */
 
-/* Improve overall layout and spacing */
-.quarto-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+/* Import distinctive fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ─────────────────────────────────────────────────────────────────
+   CSS Variables - Futuristic Color System
+   ───────────────────────────────────────────────────────────────── */
+:root {
+  /* Core colors */
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #12121a;
+  --bg-tertiary: #1a1a24;
+  --bg-card: rgba(18, 18, 26, 0.8);
+
+  /* Accent - Electric Cyan */
+  --accent: #00f0ff;
+  --accent-dim: rgba(0, 240, 255, 0.15);
+  --accent-glow: rgba(0, 240, 255, 0.4);
+
+  /* Text hierarchy */
+  --text-primary: #f0f0f5;
+  --text-secondary: #8a8a9a;
+  --text-muted: #5a5a6a;
+
+  /* Borders & lines */
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-accent: rgba(0, 240, 255, 0.3);
+
+  /* Typography */
+  --font-display: 'Outfit', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Center and improve navigation */
-.navbar {
-  padding: 1rem 0;
+/* ─────────────────────────────────────────────────────────────────
+   Base Reset & Global Styles
+   ───────────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-.navbar-nav {
-  margin: 0 auto;
-  justify-content: center;
+html {
+  scroll-behavior: smooth;
 }
 
-.navbar-brand {
-  font-weight: 600;
-  font-size: 1.25rem;
-}
-
-/* Improve main content spacing */
-.quarto-title-banner {
-  padding: 2rem 0;
-  text-align: center;
-}
-
-.quarto-title-block .quarto-title {
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.quarto-title-block .quarto-title h1 {
-  text-align: center;
-}
-
-/* Center the subtitle and other title elements */
-.quarto-title-block .description {
-  text-align: center;
-}
-
-.quarto-title-block .quarto-categories {
-  justify-content: center;
-}
-
-/* Hero banner styling */
-.hero-banner {
-  text-align: center;
-  padding: 3rem 2rem;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  border-radius: 12px;
-  margin-bottom: 3rem;
-  border: 1px solid #dee2e6;
-}
-
-.hero-banner h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #2c3e50;
-  margin-bottom: 0.5rem;
-}
-
-.hero-banner h2 {
-  font-size: 1.25rem;
+body {
+  font-family: var(--font-display);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.7;
   font-weight: 400;
-  color: #6c757d;
-  margin-bottom: 2rem;
-  margin-top: 0;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.hero-banner .btn {
-  margin: 0.25rem;
-  text-decoration: none;
+/* Subtle grid background pattern */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: -1;
 }
 
-.hero-banner .btn:hover {
-  text-decoration: none;
-  transform: translateY(-1px);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-}
-
-/* Better spacing for main content */
-main {
-  padding: 2rem 0;
-  line-height: 1.6;
-}
-
-/* Improve project grid layout */
-.grid {
-  gap: 2rem;
-  margin: 2rem 0;
-}
-
-.g-col-12.g-col-md-6 {
-  padding: 1.5rem;
-  border: 1px solid #e9ecef;
-  border-radius: 8px;
-  background: #f8f9fa;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.g-col-12.g-col-md-6:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* Improve typography */
+/* ─────────────────────────────────────────────────────────────────
+   Typography
+   ───────────────────────────────────────────────────────────────── */
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1.3;
-  margin-bottom: 1rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 h2 {
-  margin-top: 2rem;
-  margin-bottom: 1.5rem;
-  color: #2c3e50;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--border-accent);
 }
 
 h3 {
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
-  color: #34495e;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-top: var(--space-md);
 }
 
-/* Better paragraph spacing */
 p {
-  margin-bottom: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-sm);
+  max-width: 65ch;
 }
 
-/* Improve list styling */
-ul, ol {
-  margin-bottom: 1.5rem;
-  padding-left: 2rem;
-}
-
-li {
-  margin-bottom: 0.5rem;
-}
-
-/* Skills section styling */
-.skills-list {
-  list-style: none;
-  padding-left: 0;
-}
-
-.skills-list li {
-  margin-bottom: 0.8rem;
-  padding-left: 1.5rem;
-  position: relative;
-}
-
-.skills-list li::before {
-  content: "▶";
-  color: #007bff;
-  position: absolute;
-  left: 0;
-}
-
-/* About page improvements */
-.about-contents {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Responsive improvements */
-@media (max-width: 768px) {
-  .quarto-container {
-    padding: 0 15px;
-  }
-  
-  .grid {
-    gap: 1rem;
-  }
-  
-  .g-col-12.g-col-md-6 {
-    padding: 1rem;
-  }
-  
-  main {
-    padding: 1rem 0;
-  }
-}
-
-/* Footer spacing */
-.nav-footer {
-  margin-top: 3rem;
-  padding: 2rem 0;
-  border-top: 1px solid #e9ecef;
-}
-
-/* Link styling */
-a {
-  text-decoration: none;
-  color: #007bff;
-  transition: color 0.2s ease;
-}
-
-a:hover {
-  color: #0056b3;
-  text-decoration: underline;
-}
-
-/* Code block styling */
-pre {
-  background: #f8f9fa;
-  border: 1px solid #e9ecef;
-  border-radius: 6px;
-  padding: 1rem;
-  margin: 1.5rem 0;
-  overflow-x: auto;
-}
-
-/* Table styling */
-table {
-  margin: 1.5rem 0;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-th, td {
-  padding: 0.75rem;
-  border: 1px solid #dee2e6;
-  text-align: left;
-}
-
-th {
-  background-color: #f8f9fa;
+strong {
+  color: var(--text-primary);
   font-weight: 600;
 }
 
-/* Image styling */
+/* ─────────────────────────────────────────────────────────────────
+   Navigation - Floating Minimal Bar
+   ───────────────────────────────────────────────────────────────── */
+.navbar {
+  background: rgba(10, 10, 15, 0.85) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: var(--space-sm) 0;
+  transition: var(--transition-smooth);
+}
+
+.navbar-brand {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text-primary) !important;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.navbar-brand:hover {
+  color: var(--accent) !important;
+}
+
+.navbar-nav {
+  gap: var(--space-xs);
+}
+
+.nav-link {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.5rem 1rem !important;
+  border-radius: 4px;
+  transition: var(--transition-smooth);
+  position: relative;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: var(--transition-smooth);
+  transform: translateX(-50%);
+}
+
+.nav-link:hover {
+  color: var(--accent) !important;
+  background: var(--accent-dim);
+}
+
+.nav-link:hover::before {
+  width: 60%;
+}
+
+.nav-link.active {
+  color: var(--accent) !important;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Hero Banner - Futuristic Profile Section
+   ───────────────────────────────────────────────────────────────── */
+.hero-banner {
+  text-align: center;
+  padding: var(--space-xl) var(--space-md);
+  background: transparent;
+  border: none;
+  margin-bottom: var(--space-lg);
+  position: relative;
+}
+
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--accent-dim) 0%, transparent 70%);
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.hero-banner h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+  position: relative;
+}
+
+.hero-banner h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  border: none;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* Profile image with glow effect */
+.hero-banner img,
+.hero-banner .rounded-circle {
+  border-radius: 50%;
+  border: 2px solid var(--border-accent);
+  box-shadow:
+    0 0 30px var(--accent-dim),
+    0 0 60px rgba(0, 240, 255, 0.1);
+  transition: var(--transition-smooth);
+  position: relative;
+}
+
+.hero-banner img:hover,
+.hero-banner .rounded-circle:hover {
+  border-color: var(--accent);
+  box-shadow:
+    0 0 40px var(--accent-glow),
+    0 0 80px rgba(0, 240, 255, 0.2);
+  transform: scale(1.02);
+}
+
+/* Social buttons */
+.hero-banner .btn {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  margin: 0.3rem;
+  transition: var(--transition-smooth);
+  text-decoration: none !important;
+}
+
+.hero-banner .btn-outline-primary {
+  color: var(--accent) !important;
+  border: 1px solid var(--border-accent);
+  background: transparent;
+}
+
+.hero-banner .btn-outline-primary:hover {
+  background: var(--accent);
+  color: var(--bg-primary) !important;
+  border-color: var(--accent);
+  box-shadow: 0 0 20px var(--accent-glow);
+  transform: translateY(-2px);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Main Content Area
+   ───────────────────────────────────────────────────────────────── */
+.quarto-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+main {
+  padding: var(--space-md) 0 var(--space-xl);
+}
+
+#quarto-content {
+  background: transparent;
+}
+
+/* Hide default title block */
+.quarto-title-block {
+  display: none;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Cards & Grid Items
+   ───────────────────────────────────────────────────────────────── */
+.grid {
+  gap: var(--space-md);
+  margin: var(--space-md) 0;
+}
+
+.g-col-12.g-col-md-6,
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: var(--space-md);
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.g-col-12.g-col-md-6::before,
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0;
+  transition: var(--transition-smooth);
+}
+
+.g-col-12.g-col-md-6:hover,
+.card:hover {
+  border-color: var(--border-accent);
+  transform: translateY(-4px);
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.3),
+    0 0 30px var(--accent-dim);
+}
+
+.g-col-12.g-col-md-6:hover::before,
+.card:hover::before {
+  opacity: 1;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Links
+   ───────────────────────────────────────────────────────────────── */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+a:hover {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+/* Content links with underline effect */
+main p a,
+main li a {
+  position: relative;
+  padding-bottom: 2px;
+}
+
+main p a::after,
+main li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--transition-smooth);
+}
+
+main p a:hover::after,
+main li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Lists
+   ───────────────────────────────────────────────────────────────── */
+ul, ol {
+  margin-bottom: var(--space-md);
+  padding-left: var(--space-md);
+}
+
+li {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xs);
+  position: relative;
+}
+
+ul li::marker {
+  color: var(--accent);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Buttons - Futuristic Style
+   ───────────────────────────────────────────────────────────────── */
+.btn {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  transition: var(--transition-smooth);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--bg-primary);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: var(--text-primary);
+  box-shadow: 0 0 30px var(--accent-glow);
+  transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--border-accent);
+}
+
+.btn-outline-primary:hover {
+  background: var(--accent);
+  color: var(--bg-primary);
+  border-color: var(--accent);
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+.btn-outline-dark {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+}
+
+.btn-outline-dark:hover {
+  color: var(--text-primary);
+  border-color: var(--text-secondary);
+  background: var(--bg-tertiary);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Code Blocks - Terminal Style
+   ───────────────────────────────────────────────────────────────── */
+pre, code {
+  font-family: var(--font-mono);
+}
+
+pre {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: var(--space-md);
+  margin: var(--space-md) 0;
+  overflow-x: auto;
+  position: relative;
+}
+
+pre::before {
+  content: '>';
+  position: absolute;
+  top: var(--space-sm);
+  left: var(--space-sm);
+  color: var(--accent);
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+code {
+  font-size: 0.9em;
+  color: var(--accent);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Tables
+   ───────────────────────────────────────────────────────────────── */
+table {
+  width: 100%;
+  margin: var(--space-md) 0;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: var(--space-sm);
+  text-align: left;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+th {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  background: transparent;
+}
+
+td {
+  color: var(--text-secondary);
+}
+
+tr:hover td {
+  background: var(--accent-dim);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Images
+   ───────────────────────────────────────────────────────────────── */
 img {
   max-width: 100%;
   height: auto;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
-/* Profile image styling for about pages */
-.about-image {
-  border-radius: 50%;
-  max-width: 200px;
-  margin: 0 auto 2rem;
-  display: block;
+/* ─────────────────────────────────────────────────────────────────
+   Footer
+   ───────────────────────────────────────────────────────────────── */
+.nav-footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+  padding: var(--space-md) 0;
+  margin-top: var(--space-xl);
+}
+
+.nav-footer-center {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Search
+   ───────────────────────────────────────────────────────────────── */
+#quarto-search {
+  --bs-body-color: var(--text-secondary);
+}
+
+.search-input {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-subtle) !important;
+  color: var(--text-primary) !important;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Sidebar / TOC
+   ───────────────────────────────────────────────────────────────── */
+.sidebar {
+  background: transparent;
+}
+
+.sidebar nav[role="doc-toc"] ul li a {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  transition: var(--transition-fast);
+}
+
+.sidebar nav[role="doc-toc"] ul li a:hover {
+  color: var(--accent);
+}
+
+.sidebar nav[role="doc-toc"] ul li a.active {
+  color: var(--accent);
+  border-left-color: var(--accent);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Scrollbar - Minimal Style
+   ───────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-dim);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Selection
+   ───────────────────────────────────────────────────────────────── */
+::selection {
+  background: var(--accent);
+  color: var(--bg-primary);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Animations
+   ───────────────────────────────────────────────────────────────── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px var(--accent-dim);
+  }
+  50% {
+    box-shadow: 0 0 40px var(--accent-glow);
+  }
+}
+
+main {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Responsive Design
+   ───────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  :root {
+    --space-lg: 3rem;
+    --space-xl: 4rem;
+  }
+
+  .quarto-container {
+    padding: 0 var(--space-sm);
+  }
+
+  .hero-banner {
+    padding: var(--space-lg) var(--space-sm);
+  }
+
+  .hero-banner::before {
+    width: 250px;
+    height: 250px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .grid {
+    gap: var(--space-sm);
+  }
+
+  .g-col-12.g-col-md-6 {
+    padding: var(--space-sm);
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Quarto-specific Overrides
+   ───────────────────────────────────────────────────────────────── */
+.quarto-light {
+  --bs-body-bg: var(--bg-primary);
+  --bs-body-color: var(--text-primary);
+}
+
+/* Override Bootstrap primary color */
+.text-primary {
+  color: var(--accent) !important;
+}
+
+.bg-primary {
+  background-color: var(--accent) !important;
+}
+
+.border-primary {
+  border-color: var(--accent) !important;
+}
+
+/* Fix navbar toggle for dark theme */
+.navbar-toggler {
+  border-color: var(--border-subtle);
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Dropdown menus */
+.dropdown-menu {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+}
+
+.dropdown-item {
+  color: var(--text-secondary);
+}
+
+.dropdown-item:hover {
+  background: var(--accent-dim);
+  color: var(--accent);
 }
