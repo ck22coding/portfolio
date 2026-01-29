@@ -579,10 +579,29 @@ img {
   background: transparent;
 }
 
+#quarto-margin-sidebar {
+  padding-left: 0;
+  padding-right: 1rem;
+}
+
+.sidebar nav[role="doc-toc"] {
+  padding-left: 0;
+}
+
+.sidebar nav[role="doc-toc"] h2 {
+  font-size: 0.75rem;
+  padding-left: 0;
+}
+
+.sidebar nav[role="doc-toc"] ul {
+  padding-left: 0;
+}
+
 .sidebar nav[role="doc-toc"] ul li a {
   color: var(--text-muted);
   font-size: 0.85rem;
   transition: var(--transition-fast);
+  padding-left: 0.5rem;
 }
 
 .sidebar nav[role="doc-toc"] ul li a:hover {
