@@ -1,59 +1,28 @@
 ---
-title: "Problem Tracker"
-date: "2026-01-29"
-categories: [GitHub, Vercel, Claude Code]
+title: "Baby Care Simulator"
+description: "An interactive game where you care for a virtual baby by feeding, playing, and keeping them happy."
+date: "2026-01-22"
+image: ../images/project1-preview.jpg
+categories: [Game, Interactive, Web App]
 ---
 
-## Overview
+Baby Care Simulator is a fun interactive game where you take care of a virtual baby. Monitor their needs, keep them fed, entertained, and happy!
 
-Problem Tracker is a tool designed to help identify the most valuable problems worth solving. By logging daily pain-points and rating them on two key dimensions—frequency and customer willingness-to-pay—you can systematically discover opportunities for innovation.
+**Features:**
 
-The primary purpose of this app is to:
+- Track baby's hunger, happiness, and energy levels
+- Interactive care actions (feed, play, rest)
+- Visual feedback and animations
+- Simple, intuitive interface
 
-- Track pain-points as you experience them
-- Rate problems by how often they occur
-- Assess customer willingness-to-pay for solutions
-- Identify high-value problems worth solving
+---
 
-## Live Product Demo
+<!-- Open App button -->
+<a class="btn btn-primary d-inline-flex align-items-center" href="https://baby-game-five.vercel.app/" target="_blank" rel="noopener" aria-label="Open live app">
+  <i class="fa-solid fa-window-restore me-2" aria-hidden="true"></i> Open App in New Tab
+</a>
 
-<div class="d-flex justify-content-center gap-3 my-4">
-  <!-- Open App button -->
-  <a class="btn btn-primary d-inline-flex align-items-center"
-     href="https://problem-tracker-final.vercel.app/"
-     target="_blank" rel="noopener"
-     aria-label="Open live app">
-    <i class="fa-solid fa-window-restore me-2" aria-hidden="true"></i>
-    Open App in New Tab
-  </a>
-
-  <!-- GitHub Source button -->
-  <a class="btn btn-outline-dark d-inline-flex align-items-center"
-     href="https://github.com/ck22coding/problem-tracker"
-     target="_blank" rel="noopener"
-     aria-label="Open GitHub source">
-    <i class="fa-brands fa-github me-2" aria-hidden="true"></i>
-    View source on GitHub
-  </a>
-</div>
-
-<iframe src="https://problem-tracker-final.vercel.app/"
-        style="width:100%; height:900px; border:none;"
-        allowfullscreen>
-</iframe>
-
-## Technical Details
-
-Framework/Stack: React with Next.js
-
-Deployment: GitHub Pages + Vercel
-
-Tools Used:
-
-- Claude Code
-- Vercel for deployment
-- GitHub for version control
-
-## Product Requirements Document
-
-Paste in the PRD that you submitted to Claude Code
+<!-- GitHub Source button -->
+<a class="btn btn-outline-dark d-inline-flex align-items-center" href="https://github.com/ck22coding/baby-game" target="_blank" rel="noopener" aria-label="Open GitHub source">
+  <i class="fa-brands fa-github me-2" aria-hidden="true"></i> View Source on GitHub
+</a>
