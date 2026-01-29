@@ -249,49 +249,14 @@
     "href": "index.html",
     "title": "Carter King | Product Portfolio",
     "section": "",
-    "text": "LinkedIn    GitHub"
-  },
-  {
-    "objectID": "index.html#featured-projects",
-    "href": "index.html#featured-projects",
-    "title": "Carter King | Product Portfolio",
-    "section": "Featured Projects",
-    "text": "Featured Projects\n\nProblem Tracker\nTrack daily pain-points and rate them by frequency and customer willingness-to-pay to identify the best problems worth solving."
+    "text": "Carter King\n\n  LinkedIn    GitHub"
   },
   {
     "objectID": "projects/project-1.html",
     "href": "projects/project-1.html",
-    "title": "Problem Tracker",
+    "title": "Baby Care Simulator",
     "section": "",
-    "text": "Problem Tracker is a tool designed to help identify the most valuable problems worth solving. By logging daily pain-points and rating them on two key dimensions—frequency and customer willingness-to-pay—you can systematically discover opportunities for innovation.\nThe primary purpose of this app is to:\n\nTrack pain-points as you experience them\nRate problems by how often they occur\nAssess customer willingness-to-pay for solutions\nIdentify high-value problems worth solving"
-  },
-  {
-    "objectID": "projects/project-1.html#overview",
-    "href": "projects/project-1.html#overview",
-    "title": "Problem Tracker",
-    "section": "",
-    "text": "Problem Tracker is a tool designed to help identify the most valuable problems worth solving. By logging daily pain-points and rating them on two key dimensions—frequency and customer willingness-to-pay—you can systematically discover opportunities for innovation.\nThe primary purpose of this app is to:\n\nTrack pain-points as you experience them\nRate problems by how often they occur\nAssess customer willingness-to-pay for solutions\nIdentify high-value problems worth solving"
-  },
-  {
-    "objectID": "projects/project-1.html#live-product-demo",
-    "href": "projects/project-1.html#live-product-demo",
-    "title": "Problem Tracker",
-    "section": "Live Product Demo",
-    "text": "Live Product Demo\n\n   Open App in New Tab \n   View source on GitHub"
-  },
-  {
-    "objectID": "projects/project-1.html#technical-details",
-    "href": "projects/project-1.html#technical-details",
-    "title": "Problem Tracker",
-    "section": "Technical Details",
-    "text": "Technical Details\nFramework/Stack: React with Next.js\nDeployment: GitHub Pages + Vercel\nTools Used:\n\nClaude Code\nVercel for deployment\nGitHub for version control"
-  },
-  {
-    "objectID": "projects/project-1.html#product-requirements-document",
-    "href": "projects/project-1.html#product-requirements-document",
-    "title": "Problem Tracker",
-    "section": "Product Requirements Document",
-    "text": "Product Requirements Document\nPaste in the PRD that you submitted to Claude Code"
+    "text": "Baby Care Simulator is a fun interactive game where you take care of a virtual baby. Monitor their needs, keep them fed, entertained, and happy!\nFeatures:\n\nTrack baby’s hunger, happiness, and energy levels\nInteractive care actions (feed, play, rest)\nVisual feedback and animations\nSimple, intuitive interface\n\n\n\n  Open App in New Tab \n\n  View Source on GitHub"
   },
   {
     "objectID": "projects/project-3.html",
