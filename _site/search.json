@@ -221,28 +221,28 @@
     "href": "about.html#background",
     "title": "About Me",
     "section": "Background",
-    "text": "Background\nA BYU Cougar through and through. I’m a Strategic Management major with a passion for innovation and solving real problems. I believe the best solutions come from deeply understanding the challenges people face every day."
+    "text": "Background\nStrategic Management student at BYU’s Marriott School of Business with a focus on the intersection of strategy and technology. I’m drawn to complex problems that require both analytical rigor and creative thinking—whether that’s building AI-powered tools for deal origination or analyzing investment opportunities across industries."
   },
   {
     "objectID": "about.html#education",
     "href": "about.html#education",
     "title": "About Me",
     "section": "Education",
-    "text": "Education\n\nStrategic Management Major, Brigham Young University (Class of 2028)"
+    "text": "Education\n\nStrategic Management, BYU Marriott School of Business (Class of 2028)\nGPA: 3.80 / 4.00\nAssociations: Management Consulting, Private Equity & Venture Capital, AI in Business"
   },
   {
     "objectID": "about.html#skills",
     "href": "about.html#skills",
     "title": "About Me",
     "section": "Skills",
-    "text": "Skills\nCore Strengths:\n\nProblem Solving\nLogic\nOrganization"
+    "text": "Skills\nTechnical\n\nAI/ML tools, prompt engineering, agentic workflows\nWeb scraping, database extraction, Clay platform\n\nFinancial\n\nLBO & DCF modeling, due diligence\nMarket analysis, valuations\n\nLanguages\n\nEnglish, Croatian, Serbian, Bosnian"
   },
   {
     "objectID": "about.html#whats-next",
     "href": "about.html#whats-next",
     "title": "About Me",
     "section": "What’s Next",
-    "text": "What’s Next\nI’m focused on developing skills at the intersection of strategy and technology. I’m excited to explore opportunities where I can apply analytical thinking to build products that solve meaningful problems."
+    "text": "What’s Next\nI’m building at the intersection of strategy and technology. This summer I’m joining BYU Sandbox, a venture-scale startup program, to take a product from idea to launch. I’m looking for opportunities where analytical thinking meets real-world impact."
   },
   {
     "objectID": "index.html",
@@ -383,5 +383,12 @@
     "title": "Project 5",
     "section": "Skills Demonstrated",
     "text": "Skills Demonstrated\nList the key skills this project showcases.\n\nSkills Demonstrated: [Your skills here]\nTools Used: [Your tools here]"
+  },
+  {
+    "objectID": "about.html#experience",
+    "href": "about.html#experience",
+    "title": "About Me",
+    "section": "Experience",
+    "text": "Experience\n\n\nRevi.Ai\nApplied AI Intern — YC F24 Startup\nBuilt and deployed custom AI agents to automate market mapping for Fortune 500 clients including Goldman Sachs, Blackstone, and Disney.\n\n\nVermilion Rock Advisors\nInvestment Banking Intern\nSourced 35+ M&A targets weekly and supported live deals with financial modeling (LBO, DCF) in manufacturing sectors.\n\n\nIronclad Growth Partners\nPrivate Equity Intern\nPerformed due diligence on software companies, modeled ARR retention and growth metrics, and coordinated meetings with founders.\n\n\nColliers International\nValuation Intern\nConducted market research and authored reports for institutional multifamily assets across South Florida."
   }
 ]

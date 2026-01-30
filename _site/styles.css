@@ -836,6 +836,29 @@ main {
 }
 
 /* ─────────────────────────────────────────────────────────────────
+   Company Logos in Experience Cards
+   ───────────────────────────────────────────────────────────────── */
+.company-logo {
+  height: 40px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  margin-bottom: var(--space-sm);
+  border-radius: 4px;
+  opacity: 0.9;
+  transition: var(--transition-smooth);
+}
+
+.g-col-12.g-col-md-6:nth-child(odd) .company-logo {
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+}
+
+.g-col-12.g-col-md-6:hover .company-logo {
+  opacity: 1;
+}
+
+/* ─────────────────────────────────────────────────────────────────
    Special Bento Card Variants
    ───────────────────────────────────────────────────────────────── */
 

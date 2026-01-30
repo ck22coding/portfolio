@@ -19,20 +19,64 @@ title: "About Me"
 
 ## Background
 
-A BYU Cougar through and through. I'm a Strategic Management major with a passion for innovation and solving real problems. I believe the best solutions come from deeply understanding the challenges people face every day.
+Strategic Management student at BYU's Marriott School of Business with a focus on the intersection of strategy and technology. I'm drawn to complex problems that require both analytical rigor and creative thinking—whether that's building AI-powered tools for deal origination or analyzing investment opportunities across industries.
+
+## Experience
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+### Revi.Ai
+*Applied AI Intern* — YC F24 Startup
+
+Built and deployed custom AI agents to automate market mapping for Fortune 500 clients including Goldman Sachs, Blackstone, and Disney.
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### Vermilion Rock Advisors
+*Investment Banking Intern*
+
+Sourced 35+ M&A targets weekly and supported live deals with financial modeling (LBO, DCF) in manufacturing sectors.
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### Ironclad Growth Partners
+*Private Equity Intern*
+
+Performed due diligence on software companies, modeled ARR retention and growth metrics, and coordinated meetings with founders.
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### Colliers International
+*Valuation Intern*
+
+Conducted market research and authored reports for institutional multifamily assets across South Florida.
+:::
+
+:::
 
 ## Education
 
-- **Strategic Management Major**, Brigham Young University (Class of 2028)
+- **Strategic Management**, BYU Marriott School of Business (Class of 2028)
+- **GPA**: 3.80 / 4.00
+- **Associations**: Management Consulting, Private Equity & Venture Capital, AI in Business
 
 ## Skills
 
-**Core Strengths:**
+**Technical**
 
-- Problem Solving
-- Logic
-- Organization
+- AI/ML tools, prompt engineering, agentic workflows
+- Web scraping, database extraction, Clay platform
+
+**Financial**
+
+- LBO & DCF modeling, due diligence
+- Market analysis, valuations
+
+**Languages**
+
+- English, Croatian, Serbian, Bosnian
 
 ## What's Next
 
-I'm focused on developing skills at the intersection of strategy and technology. I'm excited to explore opportunities where I can apply analytical thinking to build products that solve meaningful problems.
+I'm building at the intersection of strategy and technology. This summer I'm joining **BYU Sandbox**, a venture-scale startup program, to take a product from idea to launch. I'm looking for opportunities where analytical thinking meets real-world impact.
