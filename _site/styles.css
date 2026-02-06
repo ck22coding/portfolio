@@ -343,12 +343,22 @@ main {
 .card {
   background: var(--card-white);
   border: none;
-  border-radius: var(--radius-lg);
-  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-md);
   transition: var(--transition-smooth);
   position: relative;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(45, 45, 42, 0.04);
+}
+
+.g-col-12.g-col-md-6 h3 {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+
+.g-col-12.g-col-md-6 p,
+.g-col-12.g-col-md-6 em {
+  margin-bottom: 0;
 }
 
 /* Alternate card styles for visual interest */

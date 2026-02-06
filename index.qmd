@@ -1,5 +1,5 @@
 ---
-title: "Carter King | Product Portfolio"
+title: "About Me"
 ---
 
 ::: {.hero-banner .text-center}
@@ -17,4 +17,58 @@ title: "Carter King | Product Portfolio"
 
 :::
 
+## Background
 
+Strategic Management student at BYU's Marriott School of Business with a focus on the intersection of strategy and technology. I'm drawn to complex problems that require both analytical rigor and creative thinking—whether that's building AI-powered tools for deal origination or analyzing investment opportunities across industries.
+
+## Internships
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+### Revi.Ai
+*Applied AI*
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### Vermilion Rock Advisors
+*Investment Banking*
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### Ironclad Growth Partners
+*Private Equity*
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### Colliers International
+*Valuation*
+:::
+
+:::
+
+## Education
+
+- **Strategic Management**, BYU Marriott School of Business (Class of 2028)
+- **GPA**: 3.80 / 4.00
+- **Associations**: Management Consulting, Private Equity & Venture Capital, AI in Business
+
+## Skills
+
+**Technical**
+
+- AI/ML tools, prompt engineering, agentic workflows
+- Web scraping, database extraction, Clay platform
+
+**Financial**
+
+- LBO & DCF modeling, due diligence
+- Market analysis, valuations
+
+**Languages**
+
+- English, Croatian, Serbian, Bosnian
+
+## What's Next
+
+I'm building at the intersection of strategy and technology. This summer I'm joining **BYU Sandbox**, a venture-scale startup program, to take a product from idea to launch. I'm looking for opportunities where analytical thinking meets real-world impact.
