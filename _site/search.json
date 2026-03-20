@@ -1,436 +1,205 @@
 [
   {
-    "objectID": "projects/project-6.html",
-    "href": "projects/project-6.html",
-    "title": "Project 6",
+    "objectID": "exploration.html",
+    "href": "exploration.html",
+    "title": "Interests & Exploration",
     "section": "",
-    "text": "Replace this content with your actual project details. This is a placeholder template for your sixth project."
+    "text": "These are ideas I’m actively developing — not conclusions, just honest thinking."
   },
   {
-    "objectID": "projects/project-6.html#project-overview",
-    "href": "projects/project-6.html#project-overview",
-    "title": "Project 6",
+    "objectID": "exploration.html#on-what-ai-actually-is",
+    "href": "exploration.html#on-what-ai-actually-is",
+    "title": "Interests & Exploration",
+    "section": "On What AI Actually Is",
+    "text": "On What AI Actually Is\nThe phrase “artificial intelligence” has always bothered me. Not for aesthetic reasons — for theological ones.\nD&C 93:29 reads: “Intelligence, or the light of truth, was not created or made, neither indeed can be.” If that’s true, then nothing we build can possess intelligence in the full sense. What we call AI is more accurately Algorithmic Intelligence — billions of lines of math, hardcoded rules, codified obedience. It follows instructions, pattern-matches against training data, and iterates through structured correction. It does not discern. It does not originate. It does not choose.\nThis isn’t a knock on AI — it’s a clarification that changes how we should use it. If AI is algorithmic, then it wins when it follows gospel principles: obedience, iteration, structured improvement. And the bottleneck shifts — from the model to the person directing it.\nThat reframing matters enormously for education."
+  },
+  {
+    "objectID": "exploration.html#ai-the-future-of-learning",
+    "href": "exploration.html#ai-the-future-of-learning",
+    "title": "Interests & Exploration",
+    "section": "AI & the Future of Learning",
+    "text": "AI & the Future of Learning\nThe dominant fear is that students will use AI to stop thinking. I think the more interesting question is whether we can design AI interactions that force more thinking — not less.\nThere’s a meaningful difference between AI as an answer machine and AI as a Socratic questioner. One replaces thinking. The other provokes it. Research supports this: AI as Socratic questioner produces deeper learning than AI as answer machine. Most educational AI implementations optimize for the wrong one.\nThe deeper idea I keep returning to is skills as cognitive conversion. If you build a Claude skill around a strategic framework — say, Schumpeterian competition — and apply it repeatedly to real scenarios, something happens. You don’t just use the framework. You start thinking in it. The repetition changes your thought process. That’s conversion in the real sense: knowledge that becomes part of how you see the world, not just something you can recite.\nI built a 411 case skill around this principle — a structured consulting engagement that walks through problem framing, solution development, and assumption mapping. The goal isn’t to complete the case. It’s to internalize the logic of how to approach one.\nEfficiency should be rewarded, not punished. AI automates routine work, which should free time for conceptual thinking. Instead of 3 hours of formatting and synthesis, you need one really good idea. Education that penalizes AI use is education that mistakes the output for the point."
+  },
+  {
+    "objectID": "exploration.html#implementation-ideas-im-thinking-about",
+    "href": "exploration.html#implementation-ideas-im-thinking-about",
+    "title": "Interests & Exploration",
+    "section": "Implementation Ideas I’m Thinking About",
+    "text": "Implementation Ideas I’m Thinking About\nThese are speculative — directional, not prescriptive.\nSchool-pays-for-compute. What if institutions purchased compute directly, and students accessed AI through school-managed accounts tied to coursework? You’d keep AI use in scope, track what’s being worked on, and remove cost as a barrier — without surrendering control to personal accounts where institutional knowledge leaks out.\nGroup skills. Multiple students interacting with the same AI skill simultaneously, where the conversation doesn’t advance until everyone responds. Forces collective reasoning. Mirrors how good teams actually work.\nA prerequisite “Claude Skills” class. Before students use AI in domain-specific courses, they should understand how to build and evaluate the tools they’re using. Not coding — the logic of how skills are structured, what makes a prompt work, and how to tell when AI output should be trusted.\nAssessment redesign. If skills are the unit of work, exams should test skill quality — not just output. Did you build a good process? Does your skill follow the right logic? The question shifts from “did you get the right answer” to “did you ask the right questions.”"
+  },
+  {
+    "objectID": "exploration.html#open-questions",
+    "href": "exploration.html#open-questions",
+    "title": "Interests & Exploration",
+    "section": "Open Questions",
+    "text": "Open Questions\n\nHow do you measure conversion (true learning) vs. surface-level AI-assisted output? The best measure I’ve found: length of time between studying and accurate recall, plus depth of application. But that’s hard to assess in a semester.\nWhat level of technical depth is actually required for a non-technical student to leverage AI effectively? At what point does more knowledge stop returning value?\nHow do we preserve collaboration in an AI-augmented classroom — when AI can do individually what used to require a team?"
+  },
+  {
+    "objectID": "projects/skills.html",
+    "href": "projects/skills.html",
+    "title": "Claude Code Skills",
     "section": "",
-    "text": "Replace this content with your actual project details. This is a placeholder template for your sixth project."
+    "text": "Claude Code skills are reusable instruction sets that extend what Claude can do. Think of them as specialized modes — each one teaches Claude how to approach a specific task. Invoke /skill-name and Claude operates with that set of knowledge, constraints, and steps.\nThis page distinguishes between skills I built from scratch and tools I use heavily (with credit to their authors — that context matters)."
   },
   {
-    "objectID": "projects/project-6.html#challenge",
-    "href": "projects/project-6.html#challenge",
-    "title": "Project 6",
-    "section": "Challenge",
-    "text": "Challenge\nDescribe the specific challenge or problem you were addressing."
-  },
-  {
-    "objectID": "projects/project-6.html#approach",
-    "href": "projects/project-6.html#approach",
-    "title": "Project 6",
-    "section": "Approach",
-    "text": "Approach\nDetail your methodology and approach to solving the problem."
-  },
-  {
-    "objectID": "projects/project-6.html#results",
-    "href": "projects/project-6.html#results",
-    "title": "Project 6",
-    "section": "Results",
-    "text": "Results\nPresent your findings, outcomes, and impact."
-  },
-  {
-    "objectID": "projects/project-6.html#skills-demonstrated",
-    "href": "projects/project-6.html#skills-demonstrated",
-    "title": "Project 6",
-    "section": "Skills Demonstrated",
-    "text": "Skills Demonstrated\nList the key skills this project showcases.\n\nSkills Demonstrated: [Your skills here]\nTools Used: [Your tools here]"
-  },
-  {
-    "objectID": "projects/project-4.html",
-    "href": "projects/project-4.html",
-    "title": "Project 4",
+    "objectID": "projects/skills.html#what-are-skills",
+    "href": "projects/skills.html#what-are-skills",
+    "title": "Claude Code Skills",
     "section": "",
-    "text": "Replace this content with your actual project details. This is a placeholder template for your fourth project."
+    "text": "Claude Code skills are reusable instruction sets that extend what Claude can do. Think of them as specialized modes — each one teaches Claude how to approach a specific task. Invoke /skill-name and Claude operates with that set of knowledge, constraints, and steps.\nThis page distinguishes between skills I built from scratch and tools I use heavily (with credit to their authors — that context matters)."
   },
   {
-    "objectID": "projects/project-4.html#project-overview",
-    "href": "projects/project-4.html#project-overview",
-    "title": "Project 4",
+    "objectID": "projects/skills.html#skills-i-built",
+    "href": "projects/skills.html#skills-i-built",
+    "title": "Claude Code Skills",
+    "section": "Skills I Built",
+    "text": "Skills I Built\nThese are original skills I designed and wrote:\n411 Case — Interactive business case analysis agent based on the 411 course methodology (David J. Bryce, BYU Marriott). Guides through a structured consulting engagement: problem framing → solution development → assumption mapping → recommendation.\nEmail Tracker — Reads AI/Claude Code newsletter emails via Gmail MCP, summarizes findings, researches links, and proposes updates to Claude setup files. Automated research pipeline, not just a reader.\nAutoresearch — Self-improving skill optimizer. Runs a skill against test prompts, grades outputs against KPIs (phase-level + holistic), and iteratively improves the skill prompt. Inspired by Andrej Karpathy’s autoresearch methodology — I adapted it specifically for Claude Code skill optimization.\nDung — Parallel worktree orchestrator. Reads a project roadmap, identifies tasks that can run in parallel via dependency resolution, creates git worktrees, and outputs ready-to-run terminal commands. Named for the workhorse it is.\nClose Session — End-of-session capture routine. 6 phases: project inventory → decisions made → memory updates → git cleanup → summary. Human-gated at every step. Prevents context loss between conversations.\nLocker Router — Thin router that fetches skills from a remote Locker server. One skill that gives Claude access to all team skills stored server-side — the last mile of Locker’s delivery system.\nKPI Setter — Maps any multi-step process into phases, defines binary KPIs per phase, and writes test scenarios. Pipeline: /kpi-setter → kpi.md → /autoresearch.\nBrain Dump — Processes raw thoughts into organized memory files. For when you have 10 minutes and a lot in your head."
+  },
+  {
+    "objectID": "projects/skills.html#tools-i-use-heavily",
+    "href": "projects/skills.html#tools-i-use-heavily",
+    "title": "Claude Code Skills",
+    "section": "Tools I Use Heavily",
+    "text": "Tools I Use Heavily\nCredit where it’s due. These tools shaped how I work day to day.\n\ngstack (by Garry Tan)\nA suite of skills for shipping software. I use these constantly:\n\n/browse — Persistent headless Chromium, ~100ms per command. Navigate, click, screenshot, fill forms, check console errors.\n/qa — Find bugs, fix with atomic commits, re-verify with screenshots. Loop until clean.\n/ship — Fully automated release: merge base branch, run tests, audit diff, bump version, update CHANGELOG, commit, push, create PR.\n/review — Pre-landing PR review. Pass 1: critical issues. Pass 2: informational. Auto-fixes obvious problems.\n/plan-ceo-review — Founder mode: challenge the scope, find the 10-star product, expand or cut with conviction.\n/plan-eng-review — Eng manager mode: lock in architecture, diagrams, edge cases, test coverage.\n/qa-design-review — Visual audit. Grades A-F. Detects AI slop patterns, spacing issues, hierarchy problems. Auto-fixes iteratively.\n\ngstack is the backbone of how I ship. The /browse + /qa + /ship loop is something I run on every project.\n\n\nKarpathy’s Autoresearch\nAndrej Karpathy published an autoresearch methodology: use AI to iteratively improve its own research and reasoning processes. His framing — run the process, grade the output, feed the grade back in, repeat — became the conceptual foundation for my own autoresearch skill, which applies that loop specifically to Claude Code skill optimization. The /kpi-setter → /autoresearch pipeline is a direct descendant of his work.\n\n\nAnthropic’s Official Skills\nSkills from Anthropic’s skills repository that I’ve installed and use regularly: /pdf, /pptx, /docx, /mcp-builder, /doc-coauthoring, /skill-creator, and others."
+  },
+  {
+    "objectID": "projects/skills.html#by-the-numbers",
+    "href": "projects/skills.html#by-the-numbers",
+    "title": "Claude Code Skills",
+    "section": "By the Numbers",
+    "text": "By the Numbers\n\n47 skills installed system-wide (available across all projects)\nSources: built from scratch, adapted from open source, curated from trusted repos (gstack, Anthropic, Vercel Labs, community)\nSkills are lazy-loaded — they only consume context when invoked"
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
     "section": "",
-    "text": "Replace this content with your actual project details. This is a placeholder template for your fourth project."
-  },
-  {
-    "objectID": "projects/project-4.html#challenge",
-    "href": "projects/project-4.html#challenge",
-    "title": "Project 4",
-    "section": "Challenge",
-    "text": "Challenge\nDescribe the specific challenge or problem you were addressing."
-  },
-  {
-    "objectID": "projects/project-4.html#approach",
-    "href": "projects/project-4.html#approach",
-    "title": "Project 4",
-    "section": "Approach",
-    "text": "Approach\nDetail your methodology and approach to solving the problem."
-  },
-  {
-    "objectID": "projects/project-4.html#results",
-    "href": "projects/project-4.html#results",
-    "title": "Project 4",
-    "section": "Results",
-    "text": "Results\nPresent your findings, outcomes, and impact."
-  },
-  {
-    "objectID": "projects/project-4.html#skills-demonstrated",
-    "href": "projects/project-4.html#skills-demonstrated",
-    "title": "Project 4",
-    "section": "Skills Demonstrated",
-    "text": "Skills Demonstrated\nList the key skills this project showcases.\n\nSkills Demonstrated: [Your skills here]\nTools Used: [Your tools here]"
-  },
-  {
-    "objectID": "projects/project-2.html",
-    "href": "projects/project-2.html",
-    "title": "Business Case Presentation",
-    "section": "",
-    "text": "This project focused on developing a comprehensive business case and pitch presentation for a new product opportunity. The assignment required identifying a market need, analyzing the opportunity, and presenting a compelling case for why the product should be built and funded."
-  },
-  {
-    "objectID": "projects/project-2.html#assignment-overview",
-    "href": "projects/project-2.html#assignment-overview",
-    "title": "Business Case Presentation",
-    "section": "",
-    "text": "This project focused on developing a comprehensive business case and pitch presentation for a new product opportunity. The assignment required identifying a market need, analyzing the opportunity, and presenting a compelling case for why the product should be built and funded."
-  },
-  {
-    "objectID": "projects/project-2.html#executive-summary",
-    "href": "projects/project-2.html#executive-summary",
-    "title": "Business Case Presentation",
-    "section": "Executive Summary",
-    "text": "Executive Summary\nProduct Concept: [Brief description of your proposed product/service]\nMarket Opportunity: [Size and growth potential of target market]\nInvestment Required: [Estimated funding needed]\nExpected Return: [Projected revenue and profitability timeline]\nRecommendation: [Clear go/no-go recommendation with supporting rationale]"
-  },
-  {
-    "objectID": "projects/project-2.html#problem-statement",
-    "href": "projects/project-2.html#problem-statement",
-    "title": "Business Case Presentation",
-    "section": "Problem Statement",
-    "text": "Problem Statement\n\nMarket Problem\n\nIssue Identification: What specific problem does your product solve?\nTarget Audience: Who experiences this problem most acutely?\nCurrent Solutions: How are people solving this problem today?\nGap Analysis: What’s missing from existing solutions?\n\n\n\nQuantifying the Problem\n\nMarket Size: How many people/organizations face this issue?\nEconomic Impact: What does this problem cost users currently?\nUrgency: Why is now the right time to solve this problem?\nEvidence: What data supports the existence and scale of this problem?"
-  },
-  {
-    "objectID": "projects/project-2.html#market-analysis",
-    "href": "projects/project-2.html#market-analysis",
-    "title": "Business Case Presentation",
-    "section": "Market Analysis",
-    "text": "Market Analysis\n\nIndustry Overview\n\nMarket Size: Total Addressable Market (TAM), Serviceable Addressable Market (SAM)\nGrowth Trends: Historical growth rates and future projections\nKey Drivers: What factors are driving market growth?\nMarket Maturity: Where is this market in its lifecycle?\n\n\n\nCompetitive Landscape\n\nDirect Competitors: Who offers similar solutions?\nIndirect Competitors: What alternative approaches exist?\nCompetitive Advantages: How will you differentiate?\nMarket Positioning: Where will you fit in the competitive landscape?\n\n\n\nCustomer Analysis\n\nTarget Segments: Primary and secondary customer groups\nUser Personas: Detailed profiles of ideal customers\nBuying Behavior: How do customers make purchase decisions?\nPrice Sensitivity: What are customers willing to pay?"
-  },
-  {
-    "objectID": "projects/project-2.html#solution-overview",
-    "href": "projects/project-2.html#solution-overview",
-    "title": "Business Case Presentation",
-    "section": "Solution Overview",
-    "text": "Solution Overview\n\nProduct Vision\n\nCore Value Proposition: What unique value do you provide?\nKey Features: What are the essential product capabilities?\nUser Experience: How will customers interact with your product?\nDifferentiation: What makes your solution superior?\n\n\n\nProduct Strategy\n\nDevelopment Approach: Build vs. buy vs. partner decisions\nTechnology Stack: What technical foundation will you use?\nScalability: How will the product grow with demand?\nInnovation: What makes this solution innovative?"
-  },
-  {
-    "objectID": "projects/project-2.html#business-model",
-    "href": "projects/project-2.html#business-model",
-    "title": "Business Case Presentation",
-    "section": "Business Model",
-    "text": "Business Model\n\nRevenue Model\n\nPricing Strategy: How will you price your product?\nRevenue Streams: What are your sources of income?\nCustomer Acquisition: How will you attract customers?\nUnit Economics: What are your cost and revenue per customer?\n\n\n\nFinancial Projections\n\nRevenue Forecast: 3-5 year revenue projections\nCost Structure: Development, operational, and marketing costs\nProfitability Timeline: When will you reach break-even?\nInvestment Requirements: Funding needed for different milestones\n\n\n\nGo-to-Market Strategy\n\nLaunch Strategy: How will you introduce the product?\nMarketing Channels: How will you reach customers?\nSales Strategy: Direct, partner, or hybrid approach?\nCustomer Success: How will you ensure customer satisfaction?"
-  },
-  {
-    "objectID": "projects/project-2.html#implementation-plan",
-    "href": "projects/project-2.html#implementation-plan",
-    "title": "Business Case Presentation",
-    "section": "Implementation Plan",
-    "text": "Implementation Plan\n\nDevelopment Roadmap\n\nPhase 1: MVP development and initial testing\nPhase 2: Full product launch and market entry\n\nPhase 3: Scale and expansion opportunities\nMilestones: Key deliverables and timeline\n\n\n\nResource Requirements\n\nTeam Structure: What roles and skills are needed?\nTechnology Infrastructure: What systems and tools are required?\nCapital Requirements: Funding needs by phase\nStrategic Partnerships: What alliances will accelerate success?\n\n\n\nRisk Analysis\n\nMarket Risks: What could change in the market?\nTechnical Risks: What development challenges might arise?\nCompetitive Risks: How might competitors respond?\nMitigation Strategies: How will you address each risk?"
-  },
-  {
-    "objectID": "projects/project-2.html#success-metrics",
-    "href": "projects/project-2.html#success-metrics",
-    "title": "Business Case Presentation",
-    "section": "Success Metrics",
-    "text": "Success Metrics\n\nKey Performance Indicators\n\nCustomer Metrics: Acquisition, retention, satisfaction\nBusiness Metrics: Revenue, profitability, market share\nProduct Metrics: Usage, engagement, feature adoption\nOperational Metrics: Efficiency, quality, scalability\n\n\n\nSuccess Criteria\n\nShort-term (6 months): [Specific measurable goals]\nMedium-term (1-2 years): [Growth and market position targets]\nLong-term (3-5 years): [Vision achievement and expansion goals]"
-  },
-  {
-    "objectID": "projects/project-2.html#investment-recommendation",
-    "href": "projects/project-2.html#investment-recommendation",
-    "title": "Business Case Presentation",
-    "section": "Investment Recommendation",
-    "text": "Investment Recommendation\n\nCase for Investment\n\nMarket Opportunity: Large, growing market with clear need\nCompetitive Advantage: Defensible differentiation and positioning\nTeam Capability: Right skills and experience to execute\nFinancial Returns: Attractive risk-adjusted return potential\nStrategic Fit: Aligns with organizational goals and capabilities\n\n\n\nExpected Outcomes\n\nRevenue Impact: [Projected revenue contribution]\nMarket Position: [Expected market share and positioning]\nStrategic Value: [Broader organizational benefits]\nGrowth Platform: [Future expansion opportunities]"
-  },
-  {
-    "objectID": "projects/project-2.html#next-steps",
-    "href": "projects/project-2.html#next-steps",
-    "title": "Business Case Presentation",
-    "section": "Next Steps",
-    "text": "Next Steps\n\nImmediate Actions (30 days)\n\nSecure initial funding/approval\nFinalize team structure and hiring\nComplete technical feasibility analysis\nDevelop detailed project plan\n\n\n\nShort-term Milestones (90 days)\n\nComplete market validation research\nBuild MVP and conduct user testing\nEstablish key partnerships\nRefine go-to-market strategy\n\n\n\nLong-term Goals (1 year)\n\nLaunch product to target market\nAchieve customer acquisition targets\nDemonstrate product-market fit\nPlan expansion opportunities"
-  },
-  {
-    "objectID": "projects/project-2.html#appendices",
-    "href": "projects/project-2.html#appendices",
-    "title": "Business Case Presentation",
-    "section": "Appendices",
-    "text": "Appendices\n\nSupporting Data\n\nMarket research reports and analysis\nCustomer interview findings\nCompetitive analysis details\nFinancial model assumptions\n\n\n\nPresentation Materials\n\nSlide Deck: [Link to presentation slides]\nExecutive Summary: [One-page business case summary]\n\nFinancial Model: [Detailed financial projections]\nSupporting Research: [Market data and analysis]\n\n\nSkills Demonstrated: Business Strategy, Market Analysis, Financial Modeling, Presentation Design, Strategic Planning\nTools Used: PowerPoint/Keynote, Excel/Google Sheets, Market Research Databases, Survey Tools"
-  },
-  {
-    "objectID": "problems.html",
-    "href": "problems.html",
-    "title": "Problems I’m Exploring",
-    "section": "",
-    "text": "I approach problems as opportunities. These are real challenges I’ve observed or experienced—each one represents a gap between how things are and how they could be. I’m documenting them not just to remember them, but to think more deeply about which ones are worth solving."
-  },
-  {
-    "objectID": "problems.html#accessing-historical-data-and-financials",
-    "href": "problems.html#accessing-historical-data-and-financials",
-    "title": "Problems I’m Exploring",
-    "section": "1. Accessing Historical Data and Financials",
-    "text": "1. Accessing Historical Data and Financials\nThe Problem: Finding reliable, comprehensive historical business and financial data is surprisingly difficult. Whether researching a company’s past performance, analyzing market trends, or building financial models, the data is often fragmented, paywalled, or inconsistent.\nWhy It Matters to Me: As a Strategic Management student, data-driven decision making is essential. Without accessible historical data, we’re forced to make important decisions with incomplete information.\nThe Opportunity: A solution that aggregates and standardizes historical financial data could empower students, entrepreneurs, and analysts to make better-informed decisions."
-  },
-  {
-    "objectID": "problems.html#choosing-how-we-consume-media",
-    "href": "problems.html#choosing-how-we-consume-media",
-    "title": "Problems I’m Exploring",
-    "section": "2. Choosing How We Consume Media",
-    "text": "2. Choosing How We Consume Media\nThe Problem: We’re overwhelmed with media options—streaming services, social platforms, podcasts, news outlets—while algorithms increasingly decide what we see. The paradox of choice combined with algorithmic curation means we often consume passively rather than intentionally.\nWhy It Matters to Me: Media shapes how we learn, what we believe, and how we spend our time. Taking control of media consumption is taking control of personal growth.\nThe Opportunity: Tools or frameworks that help people consume media more intentionally could improve learning outcomes and reduce digital overwhelm."
-  },
-  {
-    "objectID": "problems.html#inefficient-road-and-pedestrian-intersections",
-    "href": "problems.html#inefficient-road-and-pedestrian-intersections",
-    "title": "Problems I’m Exploring",
-    "section": "3. Inefficient Road and Pedestrian Intersections",
-    "text": "3. Inefficient Road and Pedestrian Intersections\nThe Problem: Traffic intersections are often poorly optimized for both vehicles and pedestrians. Long wait times, unsafe crossings, and inefficient signal timing waste time and create safety hazards.\nWhy It Matters to Me: I experience this daily. Minutes lost at poorly timed lights add up, and I’ve witnessed near-misses that could have been prevented with better design.\nThe Opportunity: Smart intersection technology, better urban planning, or even simple timing optimizations could improve safety and save millions of collective hours."
-  },
-  {
-    "objectID": "problems.html#outsourcing-learning-to-ai",
-    "href": "problems.html#outsourcing-learning-to-ai",
-    "title": "Problems I’m Exploring",
-    "section": "4. Outsourcing Learning to AI",
-    "text": "4. Outsourcing Learning to AI\nThe Problem: AI tools can now answer questions, write essays, and solve problems instantly. While powerful, this creates a temptation to outsource thinking rather than develop genuine understanding and skills.\nWhy It Matters to Me: As a student learning to use AI effectively, I constantly navigate the line between leveraging AI as a tool and using it as a crutch. The skills I don’t develop now will be gaps later.\nThe Opportunity: Frameworks, tools, or educational approaches that help people use AI to enhance learning—rather than replace it—could be transformative for education."
-  },
-  {
-    "objectID": "problems.html#imposter-syndrome",
-    "href": "problems.html#imposter-syndrome",
-    "title": "Problems I’m Exploring",
-    "section": "5. Imposter Syndrome",
-    "text": "5. Imposter Syndrome\nThe Problem: Many capable people consistently doubt their abilities and fear being exposed as frauds, despite evidence of their competence. This self-doubt holds people back from opportunities and diminishes their contributions.\nWhy It Matters to Me: I’ve experienced this firsthand—questioning whether I belong or whether my ideas are valuable. It’s a barrier that affects performance and well-being.\nThe Opportunity: Better understanding of imposter syndrome’s causes and practical strategies for overcoming it could unlock potential for countless students and professionals."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About Me",
-    "section": "",
-    "text": "LinkedIn    GitHub"
-  },
-  {
-    "objectID": "about.html#background",
-    "href": "about.html#background",
-    "title": "About Me",
-    "section": "Background",
-    "text": "Background\nStrategic Management student at BYU’s Marriott School of Business with a focus on the intersection of strategy and technology. I’m drawn to complex problems that require both analytical rigor and creative thinking—whether that’s building AI-powered tools for deal origination or analyzing investment opportunities across industries."
-  },
-  {
-    "objectID": "about.html#education",
-    "href": "about.html#education",
-    "title": "About Me",
-    "section": "Education",
-    "text": "Education\n\nStrategic Management, BYU Marriott School of Business (Class of 2028)\nGPA: 3.80 / 4.00\nAssociations: Management Consulting, Private Equity & Venture Capital, AI in Business"
-  },
-  {
-    "objectID": "about.html#skills",
-    "href": "about.html#skills",
-    "title": "About Me",
-    "section": "Skills",
-    "text": "Skills\nTechnical\n\nAI/ML tools, prompt engineering, agentic workflows\nWeb scraping, database extraction, Clay platform\n\nFinancial\n\nLBO & DCF modeling, due diligence\nMarket analysis, valuations\n\nLanguages\n\nEnglish, Croatian, Serbian, Bosnian"
-  },
-  {
-    "objectID": "about.html#whats-next",
-    "href": "about.html#whats-next",
-    "title": "About Me",
-    "section": "What’s Next",
-    "text": "What’s Next\nI’m building at the intersection of strategy and technology. This summer I’m joining BYU Sandbox, a venture-scale startup program, to take a product from idea to launch. I’m looking for opportunities where analytical thinking meets real-world impact."
+    "text": "Things I’m building.\n\n\nLocker\nEnterprise skill middleware for Claude Code teams. Share AI knowledge securely across your org — without every employee reinventing the wheel.\n\n\nContextOS\nA context engineering platform for firms. The bottleneck to AI adoption isn’t the AI — it’s the context. ContextOS is the infrastructure that fixes that.\n\n\nClaude Code Skills\n40+ skills built and curated for AI-powered development workflows — from browser automation to parallel worktree orchestration to self-improving skill optimizers."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "About Me",
     "section": "",
-    "text": "LinkedIn    GitHub"
+    "text": "Building AI tools for teams.\n\n  LinkedIn    GitHub"
   },
   {
-    "objectID": "projects/project-1.html",
-    "href": "projects/project-1.html",
-    "title": "Baby Care Simulator",
-    "section": "",
-    "text": "Baby Care Simulator is a fun interactive game where you take care of a virtual baby. Monitor their needs, keep them fed, entertained, and happy!\nFeatures:\n\nTrack baby’s hunger, happiness, and energy levels\nInteractive care actions (feed, play, rest)\nVisual feedback and animations\nSimple, intuitive interface\n\n\n\n  Open App in New Tab \n\n  View Source on GitHub"
-  },
-  {
-    "objectID": "projects/project-3.html",
-    "href": "projects/project-3.html",
-    "title": "Market Entry Strategy Analysis",
-    "section": "",
-    "text": "Summarize the market entry challenge and your role in developing the strategy. What new market or product category were you analyzing?"
-  },
-  {
-    "objectID": "projects/project-3.html#project-overview",
-    "href": "projects/project-3.html#project-overview",
-    "title": "Market Entry Strategy Analysis",
-    "section": "",
-    "text": "Summarize the market entry challenge and your role in developing the strategy. What new market or product category were you analyzing?"
-  },
-  {
-    "objectID": "projects/project-3.html#executive-summary",
-    "href": "projects/project-3.html#executive-summary",
-    "title": "Market Entry Strategy Analysis",
-    "section": "Executive Summary",
-    "text": "Executive Summary\nProvide a high-level overview of your recommendations and the expected impact. This section should be accessible to both technical and business stakeholders."
-  },
-  {
-    "objectID": "projects/project-3.html#market-analysis",
-    "href": "projects/project-3.html#market-analysis",
-    "title": "Market Entry Strategy Analysis",
-    "section": "Market Analysis",
-    "text": "Market Analysis\n\nIndustry Landscape\n\nWhat is the size and growth rate of the target market?\nWho are the major players and what market share do they hold?\nWhat are the key industry trends and drivers?\n\n\n\nCompetitive Analysis\n\nWho are your direct and indirect competitors?\nWhat are their strengths, weaknesses, and market positioning?\nWhere are the gaps and opportunities?\n\n\n\nCustomer Analysis\n\nWho is your target customer?\nWhat are their needs, pain points, and preferences?\nHow do they currently solve the problem you’re addressing?"
-  },
-  {
-    "objectID": "projects/project-3.html#strategic-framework",
-    "href": "projects/project-3.html#strategic-framework",
-    "title": "Market Entry Strategy Analysis",
-    "section": "Strategic Framework",
-    "text": "Strategic Framework\n\nMarket Opportunity\n\nWhat specific opportunity did you identify?\nHow large is the addressable market?\nWhat factors make this the right time to enter?\n\n\n\nValue Proposition\n\nWhat unique value does your product/service offer?\nHow does it differentiate from existing solutions?\nWhy would customers choose you over alternatives?\n\n\n\nGo-to-Market Strategy\n\nWhat channels will you use to reach customers?\nHow will you price your offering?\nWhat partnerships or alliances are needed?"
-  },
-  {
-    "objectID": "projects/project-3.html#research-methodology",
-    "href": "projects/project-3.html#research-methodology",
-    "title": "Market Entry Strategy Analysis",
-    "section": "Research Methodology",
-    "text": "Research Methodology\n\nData Sources\n\nWhat primary research did you conduct?\nWhich secondary sources did you leverage?\nHow did you ensure data quality and reliability?\n\n\n\nAnalysis Techniques\n\nWhat frameworks did you apply (Porter’s Five Forces, SWOT, etc.)?\nWhich quantitative and qualitative methods did you use?\nHow did you validate your assumptions?"
-  },
-  {
-    "objectID": "projects/project-3.html#key-findings",
-    "href": "projects/project-3.html#key-findings",
-    "title": "Market Entry Strategy Analysis",
-    "section": "Key Findings",
-    "text": "Key Findings\n\nMarket Insights\nPresent your 3-5 most important discoveries:\n\nInsight #1: Description and implications\nInsight #2: Description and implications\n\nInsight #3: Description and implications\n\n\n\nCustomer Insights\n\nWhat did you learn about customer behavior and preferences?\nWhat unmet needs did you identify?\nHow price-sensitive is the target market?"
-  },
-  {
-    "objectID": "projects/project-3.html#strategic-recommendations",
-    "href": "projects/project-3.html#strategic-recommendations",
-    "title": "Market Entry Strategy Analysis",
-    "section": "Strategic Recommendations",
-    "text": "Strategic Recommendations\n\nMarket Entry Approach\n\nWhat entry strategy do you recommend (direct, partnership, acquisition)?\nWhat should be the geographic focus?\nWhat’s the optimal timing for launch?\n\n\n\nProduct Strategy\n\nWhat features should be prioritized for launch?\nHow should the product be positioned?\nWhat pricing strategy will maximize adoption?\n\n\n\nResource Requirements\n\nWhat investment is needed?\nWhat capabilities must be developed?\nWhat partnerships are critical for success?"
-  },
-  {
-    "objectID": "projects/project-3.html#implementation-roadmap",
-    "href": "projects/project-3.html#implementation-roadmap",
-    "title": "Market Entry Strategy Analysis",
-    "section": "Implementation Roadmap",
-    "text": "Implementation Roadmap\n\nPhase 1: Foundation (Months 1-3)\n\nKey activities and milestones\nResource requirements\nSuccess metrics\n\n\n\nPhase 2: Launch (Months 4-9)\n\nGo-to-market execution\nCustomer acquisition strategy\nPerformance monitoring\n\n\n\nPhase 3: Scale (Months 10-18)\n\nExpansion opportunities\nOptimization initiatives\nLong-term growth strategy"
-  },
-  {
-    "objectID": "projects/project-3.html#risk-assessment",
-    "href": "projects/project-3.html#risk-assessment",
-    "title": "Market Entry Strategy Analysis",
-    "section": "Risk Assessment",
-    "text": "Risk Assessment\n\nKey Risks\n\nWhat are the primary threats to success?\nHow likely are these risks to materialize?\nWhat would be the potential impact?\n\n\n\nMitigation Strategies\n\nHow can each risk be reduced or eliminated?\nWhat contingency plans should be developed?\nWhat early warning indicators should be monitored?"
-  },
-  {
-    "objectID": "projects/project-3.html#expected-outcomes",
-    "href": "projects/project-3.html#expected-outcomes",
-    "title": "Market Entry Strategy Analysis",
-    "section": "Expected Outcomes",
-    "text": "Expected Outcomes\n\nFinancial Projections\n\nWhat revenue potential do you forecast?\nWhat are the key cost drivers?\nWhen do you expect to reach profitability?\n\n\n\nSuccess Metrics\n\nHow will you measure progress and success?\nWhat leading and lagging indicators will you track?\nWhat are the key performance benchmarks?"
-  },
-  {
-    "objectID": "projects/project-3.html#conclusion",
-    "href": "projects/project-3.html#conclusion",
-    "title": "Market Entry Strategy Analysis",
-    "section": "Conclusion",
-    "text": "Conclusion\nSummarize your recommendations and their strategic importance. Emphasize the opportunity size, competitive advantages, and expected returns on investment.\n\nSkills Demonstrated: Market Research, Strategic Analysis, Business Planning, Financial Modeling, Competitive Intelligence, Stakeholder Communication\nTools Used: Excel, Tableau, Survey Tools, Industry Databases, Financial Modeling Software"
-  },
-  {
-    "objectID": "projects/project-5.html",
-    "href": "projects/project-5.html",
-    "title": "Project 5",
-    "section": "",
-    "text": "Replace this content with your actual project details. This is a placeholder template for your fifth project."
-  },
-  {
-    "objectID": "projects/project-5.html#project-overview",
-    "href": "projects/project-5.html#project-overview",
-    "title": "Project 5",
-    "section": "",
-    "text": "Replace this content with your actual project details. This is a placeholder template for your fifth project."
-  },
-  {
-    "objectID": "projects/project-5.html#challenge",
-    "href": "projects/project-5.html#challenge",
-    "title": "Project 5",
-    "section": "Challenge",
-    "text": "Challenge\nDescribe the specific challenge or problem you were addressing."
-  },
-  {
-    "objectID": "projects/project-5.html#approach",
-    "href": "projects/project-5.html#approach",
-    "title": "Project 5",
-    "section": "Approach",
-    "text": "Approach\nDetail your methodology and approach to solving the problem."
-  },
-  {
-    "objectID": "projects/project-5.html#results",
-    "href": "projects/project-5.html#results",
-    "title": "Project 5",
-    "section": "Results",
-    "text": "Results\nPresent your findings, outcomes, and impact."
-  },
-  {
-    "objectID": "projects/project-5.html#skills-demonstrated",
-    "href": "projects/project-5.html#skills-demonstrated",
-    "title": "Project 5",
-    "section": "Skills Demonstrated",
-    "text": "Skills Demonstrated\nList the key skills this project showcases.\n\nSkills Demonstrated: [Your skills here]\nTools Used: [Your tools here]"
-  },
-  {
-    "objectID": "about.html#experience",
-    "href": "about.html#experience",
+    "objectID": "index.html#what-i-do",
+    "href": "index.html#what-i-do",
     "title": "About Me",
-    "section": "Experience",
-    "text": "Experience\n\n\nRevi.Ai\nApplied AI Intern — YC F24 Startup\nBuilt and deployed custom AI agents to automate market mapping for Fortune 500 clients including Goldman Sachs, Blackstone, and Disney.\n\n\nVermilion Rock Advisors\nInvestment Banking Intern\nSourced 35+ M&A targets weekly and supported live deals with financial modeling (LBO, DCF) in manufacturing sectors.\n\n\nIronclad Growth Partners\nPrivate Equity Intern\nPerformed due diligence on software companies, modeled ARR retention and growth metrics, and coordinated meetings with founders.\n\n\nColliers International\nValuation Intern\nConducted market research and authored reports for institutional multifamily assets across South Florida."
+    "section": "What I Do",
+    "text": "What I Do\nI build AI infrastructure — middleware, context systems, developer tooling. Currently working on Locker, enterprise skill middleware that lets teams share AI knowledge securely, and ContextOS, a context engineering platform that makes AI actually work for a whole company. I’ve also built 40+ Claude Code skills spanning research, shipping, QA, and knowledge capture."
   },
   {
     "objectID": "index.html#background",
     "href": "index.html#background",
     "title": "About Me",
     "section": "Background",
-    "text": "Background\nStrategic Management student at BYU’s Marriott School of Business with a focus on the intersection of strategy and technology. I’m drawn to complex problems that require both analytical rigor and creative thinking—whether that’s building AI-powered tools for deal origination or analyzing investment opportunities across industries."
-  },
-  {
-    "objectID": "index.html#experience",
-    "href": "index.html#experience",
-    "title": "About Me",
-    "section": "Experience",
-    "text": "Experience\n\n\nRevi.Ai\nApplied AI Intern\n\n\nVermilion Rock Advisors\nInvestment Banking Intern\n\n\nIronclad Growth Partners\nPrivate Equity Intern\n\n\nColliers International\nValuation Intern"
-  },
-  {
-    "objectID": "index.html#education",
-    "href": "index.html#education",
-    "title": "About Me",
-    "section": "Education",
-    "text": "Education\n\nStrategic Management, BYU Marriott School of Business (Class of 2028)\nGPA: 3.80 / 4.00\nAssociations: Management Consulting, Private Equity & Venture Capital, AI in Business"
+    "text": "Background\nBYU Marriott School of Business, Strategic Management (Class of 2028). Before going deep on AI, I worked in investment banking (Vermilion Rock Advisors), private equity (Ironclad Growth Partners), and valuation (Colliers International). That experience taught me how firms think about competitive advantage — now I build tools that create it.\nThis summer I’m joining BYU Sandbox, a venture-scale startup program, to take a product from idea to launch."
   },
   {
     "objectID": "index.html#skills",
     "href": "index.html#skills",
     "title": "About Me",
     "section": "Skills",
-    "text": "Skills\nTechnical\n\nAI/ML tools, prompt engineering, agentic workflows\nWeb scraping, database extraction, Clay platform\n\nFinancial\n\nLBO & DCF modeling, due diligence\nMarket analysis, valuations\n\nLanguages\n\nEnglish, Croatian, Serbian, Bosnian"
+    "text": "Skills\nAI & Developer Tools\n\nClaude Code, MCP servers, prompt engineering, agentic workflows\nFastAPI, Next.js, PostgreSQL, Railway, Vercel\n\nLanguages\n\nEnglish, Croatian, Serbian, Bosnian"
   },
   {
     "objectID": "index.html#whats-next",
     "href": "index.html#whats-next",
     "title": "About Me",
     "section": "What’s Next",
-    "text": "What’s Next\nI’m building at the intersection of strategy and technology. This summer I’m joining BYU Sandbox, a venture-scale startup program, to take a product from idea to launch. I’m looking for opportunities where analytical thinking meets real-world impact."
+    "text": "What’s Next\nShipping ContextOS. Growing Locker. Building at BYU Sandbox this summer."
   },
   {
-    "objectID": "index.html#internships",
-    "href": "index.html#internships",
-    "title": "About Me",
-    "section": "Internships",
-    "text": "Internships\n\n\nRevi.Ai\nApplied AI\n\n\nVermilion Rock Advisors\nInvestment Banking\n\n\nIronclad Growth Partners\nPrivate Equity\n\n\nColliers International\nValuation"
+    "objectID": "projects/contextos.html",
+    "href": "projects/contextos.html",
+    "title": "ContextOS",
+    "section": "",
+    "text": "The bottleneck to AI adoption isn’t the AI. It’s the context.\nCompanies say “everyone use AI” then wonder why it doesn’t work. It doesn’t work because the AI has zero knowledge of how the company operates — its processes, terminology, SOPs, and standards. 95% of GenAI pilots fail (MIT). 42% of companies abandoned most AI initiatives in 2025 (S&P Global)."
+  },
+  {
+    "objectID": "projects/contextos.html#the-thesis",
+    "href": "projects/contextos.html#the-thesis",
+    "title": "ContextOS",
+    "section": "",
+    "text": "The bottleneck to AI adoption isn’t the AI. It’s the context.\nCompanies say “everyone use AI” then wonder why it doesn’t work. It doesn’t work because the AI has zero knowledge of how the company operates — its processes, terminology, SOPs, and standards. 95% of GenAI pilots fail (MIT). 42% of companies abandoned most AI initiatives in 2025 (S&P Global)."
+  },
+  {
+    "objectID": "projects/contextos.html#three-problems-with-enterprise-ai-today",
+    "href": "projects/contextos.html#three-problems-with-enterprise-ai-today",
+    "title": "ContextOS",
+    "section": "Three Problems with Enterprise AI Today",
+    "text": "Three Problems with Enterprise AI Today\n1. No context. AI doesn’t know how your company works. Every employee must individually figure out prompting, what context to provide, and how to get useful output. The company should be doing that work, not each person.\n2. Context burden on employees. Firms expect all employees to become AI professionals, rather than building the systems themselves — the structures, the security, the shared knowledge — so AI just works for everyone.\n3. Knowledge spillover. When employees do connect company data to AI, they hand it to someone else’s LLM. A company’s competitive advantage lives in its processes (resource-based view, Barney 1991). When employees paste SOPs and workflows into personal AI accounts, those processes — the moats — become someone else’s training data. 90% of employees use personal AI accounts for work (Menlo Ventures)."
+  },
+  {
+    "objectID": "projects/contextos.html#why-now",
+    "href": "projects/contextos.html#why-now",
+    "title": "ContextOS",
+    "section": "Why Now",
+    "text": "Why Now\nModels are commoditizing. Open source is catching up fast. Compute costs are dropping. The model stops being the differentiator — firm context becomes the moat.\nIf you’re going to run models on your own infrastructure eventually, you still need structured firm context. ContextOS is model-agnostic."
+  },
+  {
+    "objectID": "projects/contextos.html#the-research-case-for-context-delivery",
+    "href": "projects/contextos.html#the-research-case-for-context-delivery",
+    "title": "ContextOS",
+    "section": "The Research Case for Context Delivery",
+    "text": "The Research Case for Context Delivery\nCompanies default to fine-tuning when the research says: structure and deliver context at runtime.\n\nRAG vs fine-tuning accuracy: 77-81% vs 20-30% on the same benchmarks (2-4x better)\nCost: RAG is 40% cheaper in year 1, with instant updates vs $500-$5K per retrain cycle\nMarket: RAG market projected to grow from $2.33B → $81.5B by 2035 (42.7% CAGR)"
+  },
+  {
+    "objectID": "projects/contextos.html#what-it-is",
+    "href": "projects/contextos.html#what-it-is",
+    "title": "ContextOS",
+    "section": "What It Is",
+    "text": "What It Is\nContextOS is the infrastructure that makes AI work for a whole company. Not a fancier Dropbox. Not a document search tool. The actual platform that structures, tiers, and securely delivers firm knowledge to any LLM or agent that needs it.\n\n\n\nCapability\nGlean\nGuru\nNotion\nContextOS\n\n\n\n\nStructure knowledge for AI\n—\n—\n—\n✓\n\n\nTiered delivery (L0/L1/L2)\n—\n—\n—\n✓\n\n\nDeliver to any agent (MCP/API)\n—\n—\n—\n✓\n\n\nOpinionated structure templates\n—\n—\n—\n✓\n\n\nTeam collaboration\n✓\n✓\n✓\n✓"
+  },
+  {
+    "objectID": "projects/contextos.html#relationship-to-locker",
+    "href": "projects/contextos.html#relationship-to-locker",
+    "title": "ContextOS",
+    "section": "Relationship to Locker",
+    "text": "Relationship to Locker\nLocker secures and delivers your firm context to AI. ContextOS is where you build and structure that context. Eventually they merge: Locker’s auth, encryption, and MCP delivery infrastructure carries over — ContextOS replaces the storage and organization layer."
+  },
+  {
+    "objectID": "projects/contextos.html#status",
+    "href": "projects/contextos.html#status",
+    "title": "ContextOS",
+    "section": "Status",
+    "text": "Status\nResearch and design phase. Thesis articulated. Competitive landscape mapped. Data model defined. MVP scope: Upload → auto-organize → browse → MCP delivery."
+  },
+  {
+    "objectID": "projects/locker.html",
+    "href": "projects/locker.html",
+    "title": "Locker",
+    "section": "",
+    "text": "Locker is enterprise middleware that sits between your team and their AI tools. It intercepts LLM calls, injects firm-specific skills on demand, and keeps proprietary content secure — so institutional knowledge travels with every AI interaction, automatically."
+  },
+  {
+    "objectID": "projects/locker.html#what-it-is",
+    "href": "projects/locker.html#what-it-is",
+    "title": "Locker",
+    "section": "",
+    "text": "Locker is enterprise middleware that sits between your team and their AI tools. It intercepts LLM calls, injects firm-specific skills on demand, and keeps proprietary content secure — so institutional knowledge travels with every AI interaction, automatically."
+  },
+  {
+    "objectID": "projects/locker.html#the-problem",
+    "href": "projects/locker.html#the-problem",
+    "title": "Locker",
+    "section": "The Problem",
+    "text": "The Problem\nEvery developer building with AI writes their own prompts and workflows from scratch. There’s no shared layer. When someone on your team figures out the right way to do a code review, a spec write-up, or a client brief with AI — that knowledge lives in their head, not the organization’s.\nLocker fixes that. Skills are deployed once and used by everyone, with visibility controls that let admins decide what employees can see."
+  },
+  {
+    "objectID": "projects/locker.html#how-it-works",
+    "href": "projects/locker.html#how-it-works",
+    "title": "Locker",
+    "section": "How It Works",
+    "text": "How It Works\n\nBackend: FastAPI on Railway — Anthropic proxy, skill CRUD, team management, invite system\nFrontend: Next.js dashboard on Vercel — unified admin UI + employee invite flow\nStorage: PostgreSQL with AES-256 encryption at rest\nAuth: Google OAuth sign-in; OAuth 2.1 for MCP; per-user Personal Access Tokens\nCLI: locker deploy, locker sync, locker setup\nMCP: SSE endpoint at /mcp + OAuth-protected /mcp/v2 — works natively with Claude Code\n\nSkill visibility levels:\n\n\n\nLevel\nWhat employees see\n\n\n\n\nopen\nFull skill content\n\n\nshared\nName and description only\n\n\nhidden\nNothing — auto-injected silently"
+  },
+  {
+    "objectID": "projects/locker.html#status",
+    "href": "projects/locker.html#status",
+    "title": "Locker",
+    "section": "Status",
+    "text": "Status\nPhase 3. 240+ tests passing. Shipped: invite codes, personal access tokens, organization hierarchy, cross-team skill sharing, usage tracking, structured feedback, and OAuth 2.1.\n  View on GitHub"
   }
 ]

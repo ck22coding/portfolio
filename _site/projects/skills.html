@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-01-22">
-<meta name="description" content="An interactive game where you care for a virtual baby by feeding, playing, and keeping them happy.">
+<meta name="dcterms.date" content="2026-03-19">
+<meta name="description" content="40+ skills for AI-powered development workflows">
 
-<title>Baby Care Simulator – Carter King</title>
+<title>Claude Code Skills – Carter King</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -43,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-029b10fc0dc652dab2ec1ac156c1a037.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-baedc78cbf92349237790bf011c153e8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -99,12 +99,12 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../problems.html"> 
-<span class="menu-text">Problems</span></a>
+    <a class="nav-link" href="../projects/index.html"> 
+<span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../projects/project-1.html" aria-current="page"> 
-<span class="menu-text">Baby Game</span></a>
+    <a class="nav-link" href="../exploration.html"> 
+<span class="menu-text">Interests &amp; Exploration</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -117,25 +117,39 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-are-skills" id="toc-what-are-skills" class="nav-link active" data-scroll-target="#what-are-skills">What Are Skills?</a></li>
+  <li><a href="#skills-i-built" id="toc-skills-i-built" class="nav-link" data-scroll-target="#skills-i-built">Skills I Built</a></li>
+  <li><a href="#tools-i-use-heavily" id="toc-tools-i-use-heavily" class="nav-link" data-scroll-target="#tools-i-use-heavily">Tools I Use Heavily</a>
+  <ul class="collapse">
+  <li><a href="#gstack-by-garry-tan" id="toc-gstack-by-garry-tan" class="nav-link" data-scroll-target="#gstack-by-garry-tan">gstack (by Garry Tan)</a></li>
+  <li><a href="#karpathys-autoresearch" id="toc-karpathys-autoresearch" class="nav-link" data-scroll-target="#karpathys-autoresearch">Karpathy’s Autoresearch</a></li>
+  <li><a href="#anthropics-official-skills" id="toc-anthropics-official-skills" class="nav-link" data-scroll-target="#anthropics-official-skills">Anthropic’s Official Skills</a></li>
+  </ul></li>
+  <li><a href="#by-the-numbers" id="toc-by-the-numbers" class="nav-link" data-scroll-target="#by-the-numbers">By the Numbers</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Baby Care Simulator</h1>
+<h1 class="title">Claude Code Skills</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Game</div>
-    <div class="quarto-category">Interactive</div>
-    <div class="quarto-category">Web App</div>
+    <div class="quarto-category">AI</div>
+    <div class="quarto-category">Developer Tools</div>
+    <div class="quarto-category">Claude Code</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    An interactive game where you care for a virtual baby by feeding, playing, and keeping them happy.
+    40+ skills for AI-powered development workflows
   </div>
 </div>
 
@@ -146,7 +160,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 22, 2026</p>
+      <p class="date">March 19, 2026</p>
     </div>
   </div>
   
@@ -158,21 +172,62 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Baby Care Simulator is a fun interactive game where you take care of a virtual baby. Monitor their needs, keep them fed, entertained, and happy!</p>
-<p><strong>Features:</strong></p>
-<ul>
-<li>Track baby’s hunger, happiness, and energy levels</li>
-<li>Interactive care actions (feed, play, rest)</li>
-<li>Visual feedback and animations</li>
-<li>Simple, intuitive interface</li>
-</ul>
+<section id="what-are-skills" class="level2">
+<h2 class="anchored" data-anchor-id="what-are-skills">What Are Skills?</h2>
+<p>Claude Code skills are reusable instruction sets that extend what Claude can do. Think of them as specialized modes — each one teaches Claude how to approach a specific task. Invoke <code>/skill-name</code> and Claude operates with that set of knowledge, constraints, and steps.</p>
+<p>This page distinguishes between skills I built from scratch and tools I use heavily (with credit to their authors — that context matters).</p>
 <hr>
-<!-- Open App button -->
-<p><a class="btn btn-primary d-inline-flex align-items-center" href="https://baby-game-five.vercel.app/" target="_blank" rel="noopener" aria-label="Open live app"> <i class="fa-solid fa-window-restore me-2" aria-hidden="true"></i> Open App in New Tab </a></p>
-<!-- GitHub Source button -->
-<p><a class="btn btn-outline-dark d-inline-flex align-items-center" href="https://github.com/ck22coding/baby-game" target="_blank" rel="noopener" aria-label="Open GitHub source"> <i class="fa-brands fa-github me-2" aria-hidden="true"></i> View Source on GitHub </a></p>
+</section>
+<section id="skills-i-built" class="level2">
+<h2 class="anchored" data-anchor-id="skills-i-built">Skills I Built</h2>
+<p>These are original skills I designed and wrote:</p>
+<p><strong><a href="../skills">411 Case</a></strong> — Interactive business case analysis agent based on the 411 course methodology (David J. Bryce, BYU Marriott). Guides through a structured consulting engagement: problem framing → solution development → assumption mapping → recommendation.</p>
+<p><strong>Email Tracker</strong> — Reads AI/Claude Code newsletter emails via Gmail MCP, summarizes findings, researches links, and proposes updates to Claude setup files. Automated research pipeline, not just a reader.</p>
+<p><strong>Autoresearch</strong> — Self-improving skill optimizer. Runs a skill against test prompts, grades outputs against KPIs (phase-level + holistic), and iteratively improves the skill prompt. Inspired by Andrej Karpathy’s autoresearch methodology — I adapted it specifically for Claude Code skill optimization.</p>
+<p><strong>Dung</strong> — Parallel worktree orchestrator. Reads a project roadmap, identifies tasks that can run in parallel via dependency resolution, creates git worktrees, and outputs ready-to-run terminal commands. Named for the workhorse it is.</p>
+<p><strong>Close Session</strong> — End-of-session capture routine. 6 phases: project inventory → decisions made → memory updates → git cleanup → summary. Human-gated at every step. Prevents context loss between conversations.</p>
+<p><strong>Locker Router</strong> — Thin router that fetches skills from a remote Locker server. One skill that gives Claude access to all team skills stored server-side — the last mile of Locker’s delivery system.</p>
+<p><strong>KPI Setter</strong> — Maps any multi-step process into phases, defines binary KPIs per phase, and writes test scenarios. Pipeline: <code>/kpi-setter</code> → <code>kpi.md</code> → <code>/autoresearch</code>.</p>
+<p><strong>Brain Dump</strong> — Processes raw thoughts into organized memory files. For when you have 10 minutes and a lot in your head.</p>
+<hr>
+</section>
+<section id="tools-i-use-heavily" class="level2">
+<h2 class="anchored" data-anchor-id="tools-i-use-heavily">Tools I Use Heavily</h2>
+<p>Credit where it’s due. These tools shaped how I work day to day.</p>
+<section id="gstack-by-garry-tan" class="level3">
+<h3 class="anchored" data-anchor-id="gstack-by-garry-tan">gstack (by Garry Tan)</h3>
+<p>A suite of skills for shipping software. I use these constantly:</p>
+<ul>
+<li><strong><code>/browse</code></strong> — Persistent headless Chromium, ~100ms per command. Navigate, click, screenshot, fill forms, check console errors.</li>
+<li><strong><code>/qa</code></strong> — Find bugs, fix with atomic commits, re-verify with screenshots. Loop until clean.</li>
+<li><strong><code>/ship</code></strong> — Fully automated release: merge base branch, run tests, audit diff, bump version, update CHANGELOG, commit, push, create PR.</li>
+<li><strong><code>/review</code></strong> — Pre-landing PR review. Pass 1: critical issues. Pass 2: informational. Auto-fixes obvious problems.</li>
+<li><strong><code>/plan-ceo-review</code></strong> — Founder mode: challenge the scope, find the 10-star product, expand or cut with conviction.</li>
+<li><strong><code>/plan-eng-review</code></strong> — Eng manager mode: lock in architecture, diagrams, edge cases, test coverage.</li>
+<li><strong><code>/qa-design-review</code></strong> — Visual audit. Grades A-F. Detects AI slop patterns, spacing issues, hierarchy problems. Auto-fixes iteratively.</li>
+</ul>
+<p>gstack is the backbone of how I ship. The <code>/browse</code> + <code>/qa</code> + <code>/ship</code> loop is something I run on every project.</p>
+</section>
+<section id="karpathys-autoresearch" class="level3">
+<h3 class="anchored" data-anchor-id="karpathys-autoresearch">Karpathy’s Autoresearch</h3>
+<p>Andrej Karpathy published an autoresearch methodology: use AI to iteratively improve its own research and reasoning processes. His framing — run the process, grade the output, feed the grade back in, repeat — became the conceptual foundation for my own autoresearch skill, which applies that loop specifically to Claude Code skill optimization. The <code>/kpi-setter</code> → <code>/autoresearch</code> pipeline is a direct descendant of his work.</p>
+</section>
+<section id="anthropics-official-skills" class="level3">
+<h3 class="anchored" data-anchor-id="anthropics-official-skills">Anthropic’s Official Skills</h3>
+<p>Skills from Anthropic’s skills repository that I’ve installed and use regularly: <code>/pdf</code>, <code>/pptx</code>, <code>/docx</code>, <code>/mcp-builder</code>, <code>/doc-coauthoring</code>, <code>/skill-creator</code>, and others.</p>
+<hr>
+</section>
+</section>
+<section id="by-the-numbers" class="level2">
+<h2 class="anchored" data-anchor-id="by-the-numbers">By the Numbers</h2>
+<ul>
+<li><strong>47 skills</strong> installed system-wide (available across all projects)</li>
+<li>Sources: built from scratch, adapted from open source, curated from trusted repos (gstack, Anthropic, Vercel Labs, community)</li>
+<li>Skills are lazy-loaded — they only consume context when invoked</li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
