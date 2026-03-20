@@ -4,9 +4,11 @@ title: "About Me"
 
 ::: {.hero-banner .text-center}
 
-<img src="images/profile.jpg" alt="add photo to /images" class="rounded-circle mb-3" width="160">
+<img src="images/profile.jpg" alt="Carter King" class="rounded-circle mb-3" width="160">
 
 <h1>Carter King</h1>
+
+<p class="lead">Building AI tools for teams.</p>
 
 <a href="https://www.linkedin.com/in/carter-king1/" class="btn btn-outline-primary btn-sm" target="_blank">
   <i class="fab fa-linkedin"></i> LinkedIn
@@ -17,53 +19,22 @@ title: "About Me"
 
 :::
 
+## What I Do
+
+I build AI infrastructure — middleware, context systems, developer tooling. Currently working on [Locker](projects/locker.qmd), enterprise skill middleware that lets teams share AI knowledge securely, and [ContextOS](projects/contextos.qmd), a context engineering platform that makes AI actually work for a whole company. I've also built 40+ Claude Code skills spanning research, shipping, QA, and knowledge capture.
+
 ## Background
 
-Strategic Management student at BYU's Marriott School of Business with a focus on the intersection of strategy and technology. I'm drawn to complex problems that require both analytical rigor and creative thinking—whether that's building AI-powered tools for deal origination or analyzing investment opportunities across industries.
+BYU Marriott School of Business, Strategic Management (Class of 2028). Before going deep on AI, I worked in investment banking (Vermilion Rock Advisors), private equity (Ironclad Growth Partners), and valuation (Colliers International). That experience taught me how firms think about competitive advantage — now I build tools that create it.
 
-## Internships
-
-::: {.grid}
-
-::: {.g-col-12 .g-col-md-6}
-### Revi.Ai
-*Applied AI*
-:::
-
-::: {.g-col-12 .g-col-md-6}
-### Vermilion Rock Advisors
-*Investment Banking*
-:::
-
-::: {.g-col-12 .g-col-md-6}
-### Ironclad Growth Partners
-*Private Equity*
-:::
-
-::: {.g-col-12 .g-col-md-6}
-### Colliers International
-*Valuation*
-:::
-
-:::
-
-## Education
-
-- **Strategic Management**, BYU Marriott School of Business (Class of 2028)
-- **GPA**: 3.80 / 4.00
-- **Associations**: Management Consulting, Private Equity & Venture Capital, AI in Business
+This summer I'm joining **BYU Sandbox**, a venture-scale startup program, to take a product from idea to launch.
 
 ## Skills
 
-**Technical**
+**AI & Developer Tools**
 
-- AI/ML tools, prompt engineering, agentic workflows
-- Web scraping, database extraction, Clay platform
-
-**Financial**
-
-- LBO & DCF modeling, due diligence
-- Market analysis, valuations
+- Claude Code, MCP servers, prompt engineering, agentic workflows
+- FastAPI, Next.js, PostgreSQL, Railway, Vercel
 
 **Languages**
 
@@ -71,4 +42,4 @@ Strategic Management student at BYU's Marriott School of Business with a focus o
 
 ## What's Next
 
-I'm building at the intersection of strategy and technology. This summer I'm joining **BYU Sandbox**, a venture-scale startup program, to take a product from idea to launch. I'm looking for opportunities where analytical thinking meets real-world impact.
+Shipping ContextOS. Growing Locker. Building at BYU Sandbox this summer.

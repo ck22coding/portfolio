@@ -1,0 +1,41 @@
+---
+title: "Locker"
+description: "Enterprise skill middleware for Claude Code teams"
+date: "2026-03-19"
+categories: [AI, Infrastructure, Enterprise]
+---
+
+## What It Is
+
+Locker is enterprise middleware that sits between your team and their AI tools. It intercepts LLM calls, injects firm-specific skills on demand, and keeps proprietary content secure — so institutional knowledge travels with every AI interaction, automatically.
+
+## The Problem
+
+Every developer building with AI writes their own prompts and workflows from scratch. There's no shared layer. When someone on your team figures out the right way to do a code review, a spec write-up, or a client brief with AI — that knowledge lives in their head, not the organization's.
+
+Locker fixes that. Skills are deployed once and used by everyone, with visibility controls that let admins decide what employees can see.
+
+## How It Works
+
+- **Backend:** FastAPI on Railway — Anthropic proxy, skill CRUD, team management, invite system
+- **Frontend:** Next.js dashboard on Vercel — unified admin UI + employee invite flow
+- **Storage:** PostgreSQL with AES-256 encryption at rest
+- **Auth:** Google OAuth sign-in; OAuth 2.1 for MCP; per-user Personal Access Tokens
+- **CLI:** `locker deploy`, `locker sync`, `locker setup`
+- **MCP:** SSE endpoint at `/mcp` + OAuth-protected `/mcp/v2` — works natively with Claude Code
+
+**Skill visibility levels:**
+
+| Level | What employees see |
+|-------|--------------------|
+| `open` | Full skill content |
+| `shared` | Name and description only |
+| `hidden` | Nothing — auto-injected silently |
+
+## Status
+
+Phase 3. 240+ tests passing. Shipped: invite codes, personal access tokens, organization hierarchy, cross-team skill sharing, usage tracking, structured feedback, and OAuth 2.1.
+
+<a class="btn btn-outline-dark btn-sm d-inline-flex align-items-center" href="https://github.com/ck22coding/locker" target="_blank">
+  <i class="fa-brands fa-github me-2"></i> View on GitHub
+</a>

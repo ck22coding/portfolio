@@ -1,0 +1,24 @@
+---
+title: "Projects"
+---
+
+Things I'm building.
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+### [Locker](locker.qmd)
+Enterprise skill middleware for Claude Code teams. Share AI knowledge securely across your org — without every employee reinventing the wheel.
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### [ContextOS](contextos.qmd)
+A context engineering platform for firms. The bottleneck to AI adoption isn't the AI — it's the context. ContextOS is the infrastructure that fixes that.
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### [Claude Code Skills](skills.qmd)
+40+ skills built and curated for AI-powered development workflows — from browser automation to parallel worktree orchestration to self-improving skill optimizers.
+:::
+
+:::

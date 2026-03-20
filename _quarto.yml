@@ -10,10 +10,10 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: problems.qmd
-        text: Problems
-      - href: projects/project-1.qmd
-        text: Baby Game
+      - href: projects/index.qmd
+        text: Projects
+      - href: exploration.qmd
+        text: Interests & Exploration
 
 format:
   html:

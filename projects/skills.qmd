@@ -1,0 +1,70 @@
+---
+title: "Claude Code Skills"
+description: "40+ skills for AI-powered development workflows"
+date: "2026-03-19"
+categories: [AI, Developer Tools, Claude Code]
+---
+
+## What Are Skills?
+
+Claude Code skills are reusable instruction sets that extend what Claude can do. Think of them as specialized modes — each one teaches Claude how to approach a specific task. Invoke `/skill-name` and Claude operates with that set of knowledge, constraints, and steps.
+
+This page distinguishes between skills I built from scratch and tools I use heavily (with credit to their authors — that context matters).
+
+---
+
+## Skills I Built
+
+These are original skills I designed and wrote:
+
+**[411 Case](/skills)** — Interactive business case analysis agent based on the 411 course methodology (David J. Bryce, BYU Marriott). Guides through a structured consulting engagement: problem framing → solution development → assumption mapping → recommendation.
+
+**Email Tracker** — Reads AI/Claude Code newsletter emails via Gmail MCP, summarizes findings, researches links, and proposes updates to Claude setup files. Automated research pipeline, not just a reader.
+
+**Autoresearch** — Self-improving skill optimizer. Runs a skill against test prompts, grades outputs against KPIs (phase-level + holistic), and iteratively improves the skill prompt. Inspired by Andrej Karpathy's autoresearch methodology — I adapted it specifically for Claude Code skill optimization.
+
+**Dung** — Parallel worktree orchestrator. Reads a project roadmap, identifies tasks that can run in parallel via dependency resolution, creates git worktrees, and outputs ready-to-run terminal commands. Named for the workhorse it is.
+
+**Close Session** — End-of-session capture routine. 6 phases: project inventory → decisions made → memory updates → git cleanup → summary. Human-gated at every step. Prevents context loss between conversations.
+
+**Locker Router** — Thin router that fetches skills from a remote Locker server. One skill that gives Claude access to all team skills stored server-side — the last mile of Locker's delivery system.
+
+**KPI Setter** — Maps any multi-step process into phases, defines binary KPIs per phase, and writes test scenarios. Pipeline: `/kpi-setter` → `kpi.md` → `/autoresearch`.
+
+**Brain Dump** — Processes raw thoughts into organized memory files. For when you have 10 minutes and a lot in your head.
+
+---
+
+## Tools I Use Heavily
+
+Credit where it's due. These tools shaped how I work day to day.
+
+### gstack (by Garry Tan)
+
+A suite of skills for shipping software. I use these constantly:
+
+- **`/browse`** — Persistent headless Chromium, ~100ms per command. Navigate, click, screenshot, fill forms, check console errors.
+- **`/qa`** — Find bugs, fix with atomic commits, re-verify with screenshots. Loop until clean.
+- **`/ship`** — Fully automated release: merge base branch, run tests, audit diff, bump version, update CHANGELOG, commit, push, create PR.
+- **`/review`** — Pre-landing PR review. Pass 1: critical issues. Pass 2: informational. Auto-fixes obvious problems.
+- **`/plan-ceo-review`** — Founder mode: challenge the scope, find the 10-star product, expand or cut with conviction.
+- **`/plan-eng-review`** — Eng manager mode: lock in architecture, diagrams, edge cases, test coverage.
+- **`/qa-design-review`** — Visual audit. Grades A-F. Detects AI slop patterns, spacing issues, hierarchy problems. Auto-fixes iteratively.
+
+gstack is the backbone of how I ship. The `/browse` + `/qa` + `/ship` loop is something I run on every project.
+
+### Karpathy's Autoresearch
+
+Andrej Karpathy published an autoresearch methodology: use AI to iteratively improve its own research and reasoning processes. His framing — run the process, grade the output, feed the grade back in, repeat — became the conceptual foundation for my own autoresearch skill, which applies that loop specifically to Claude Code skill optimization. The `/kpi-setter` → `/autoresearch` pipeline is a direct descendant of his work.
+
+### Anthropic's Official Skills
+
+Skills from Anthropic's skills repository that I've installed and use regularly: `/pdf`, `/pptx`, `/docx`, `/mcp-builder`, `/doc-coauthoring`, `/skill-creator`, and others.
+
+---
+
+## By the Numbers
+
+- **47 skills** installed system-wide (available across all projects)
+- Sources: built from scratch, adapted from open source, curated from trusted repos (gstack, Anthropic, Vercel Labs, community)
+- Skills are lazy-loaded — they only consume context when invoked

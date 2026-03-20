@@ -1,0 +1,54 @@
+---
+title: "ContextOS"
+description: "A context engineering platform for firm knowledge"
+date: "2026-03-19"
+categories: [AI, Context Engineering, Enterprise]
+---
+
+## The Thesis
+
+**The bottleneck to AI adoption isn't the AI. It's the context.**
+
+Companies say "everyone use AI" then wonder why it doesn't work. It doesn't work because the AI has zero knowledge of how the company operates — its processes, terminology, SOPs, and standards. 95% of GenAI pilots fail (MIT). 42% of companies abandoned most AI initiatives in 2025 (S&P Global).
+
+## Three Problems with Enterprise AI Today
+
+**1. No context.** AI doesn't know how your company works. Every employee must individually figure out prompting, what context to provide, and how to get useful output. The company should be doing that work, not each person.
+
+**2. Context burden on employees.** Firms expect all employees to become AI professionals, rather than building the systems themselves — the structures, the security, the shared knowledge — so AI just works for everyone.
+
+**3. Knowledge spillover.** When employees do connect company data to AI, they hand it to someone else's LLM. A company's competitive advantage lives in its processes (resource-based view, Barney 1991). When employees paste SOPs and workflows into personal AI accounts, those processes — the moats — become someone else's training data. 90% of employees use personal AI accounts for work (Menlo Ventures).
+
+## Why Now
+
+Models are commoditizing. Open source is catching up fast. Compute costs are dropping. The model stops being the differentiator — **firm context becomes the moat**.
+
+If you're going to run models on your own infrastructure eventually, you still need structured firm context. ContextOS is model-agnostic.
+
+## The Research Case for Context Delivery
+
+Companies default to fine-tuning when the research says: structure and deliver context at runtime.
+
+- **RAG vs fine-tuning accuracy:** 77-81% vs 20-30% on the same benchmarks (2-4x better)
+- **Cost:** RAG is 40% cheaper in year 1, with instant updates vs $500-$5K per retrain cycle
+- **Market:** RAG market projected to grow from $2.33B → $81.5B by 2035 (42.7% CAGR)
+
+## What It Is
+
+ContextOS is the infrastructure that makes AI work for a whole company. Not a fancier Dropbox. Not a document search tool. The actual platform that structures, tiers, and securely delivers firm knowledge to any LLM or agent that needs it.
+
+| Capability | Glean | Guru | Notion | ContextOS |
+|-----------|-------|------|--------|-----------|
+| Structure knowledge for AI | — | — | — | ✓ |
+| Tiered delivery (L0/L1/L2) | — | — | — | ✓ |
+| Deliver to any agent (MCP/API) | — | — | — | ✓ |
+| Opinionated structure templates | — | — | — | ✓ |
+| Team collaboration | ✓ | ✓ | ✓ | ✓ |
+
+## Relationship to Locker
+
+Locker secures and delivers your firm context to AI. ContextOS is where you build and structure that context. Eventually they merge: Locker's auth, encryption, and MCP delivery infrastructure carries over — ContextOS replaces the storage and organization layer.
+
+## Status
+
+Research and design phase. Thesis articulated. Competitive landscape mapped. Data model defined. MVP scope: Upload → auto-organize → browse → MCP delivery.

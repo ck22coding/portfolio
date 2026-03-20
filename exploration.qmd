@@ -1,0 +1,53 @@
+---
+title: "Interests & Exploration"
+---
+
+These are ideas I'm actively developing — not conclusions, just honest thinking.
+
+---
+
+## On What AI Actually Is
+
+The phrase "artificial intelligence" has always bothered me. Not for aesthetic reasons — for theological ones.
+
+D&C 93:29 reads: *"Intelligence, or the light of truth, was not created or made, neither indeed can be."* If that's true, then nothing we build can possess intelligence in the full sense. What we call AI is more accurately **Algorithmic Intelligence** — billions of lines of math, hardcoded rules, codified obedience. It follows instructions, pattern-matches against training data, and iterates through structured correction. It does not discern. It does not originate. It does not choose.
+
+This isn't a knock on AI — it's a clarification that changes how we should use it. If AI is algorithmic, then it wins when it follows gospel principles: obedience, iteration, structured improvement. And the bottleneck shifts — from the model to the person directing it.
+
+That reframing matters enormously for education.
+
+---
+
+## AI & the Future of Learning
+
+The dominant fear is that students will use AI to stop thinking. I think the more interesting question is whether we can design AI interactions that force more thinking — not less.
+
+There's a meaningful difference between AI as an **answer machine** and AI as a **Socratic questioner**. One replaces thinking. The other provokes it. Research supports this: AI as Socratic questioner produces deeper learning than AI as answer machine. Most educational AI implementations optimize for the wrong one.
+
+The deeper idea I keep returning to is **skills as cognitive conversion**. If you build a Claude skill around a strategic framework — say, Schumpeterian competition — and apply it repeatedly to real scenarios, something happens. You don't just use the framework. You start thinking in it. The repetition changes your thought process. That's conversion in the real sense: knowledge that becomes part of how you see the world, not just something you can recite.
+
+I built a [411 case skill](projects/skills.qmd) around this principle — a structured consulting engagement that walks through problem framing, solution development, and assumption mapping. The goal isn't to complete the case. It's to internalize the logic of how to approach one.
+
+Efficiency should be rewarded, not punished. AI automates routine work, which should free time for conceptual thinking. Instead of 3 hours of formatting and synthesis, you need one really good idea. Education that penalizes AI use is education that mistakes the output for the point.
+
+---
+
+## Implementation Ideas I'm Thinking About
+
+These are speculative — directional, not prescriptive.
+
+**School-pays-for-compute.** What if institutions purchased compute directly, and students accessed AI through school-managed accounts tied to coursework? You'd keep AI use in scope, track what's being worked on, and remove cost as a barrier — without surrendering control to personal accounts where institutional knowledge leaks out.
+
+**Group skills.** Multiple students interacting with the same AI skill simultaneously, where the conversation doesn't advance until everyone responds. Forces collective reasoning. Mirrors how good teams actually work.
+
+**A prerequisite "Claude Skills" class.** Before students use AI in domain-specific courses, they should understand how to build and evaluate the tools they're using. Not coding — the logic of how skills are structured, what makes a prompt work, and how to tell when AI output should be trusted.
+
+**Assessment redesign.** If skills are the unit of work, exams should test skill quality — not just output. Did you build a good process? Does your skill follow the right logic? The question shifts from "did you get the right answer" to "did you ask the right questions."
+
+---
+
+## Open Questions
+
+- How do you measure **conversion** (true learning) vs. surface-level AI-assisted output? The best measure I've found: length of time between studying and accurate recall, plus depth of application. But that's hard to assess in a semester.
+- What level of technical depth is actually required for a non-technical student to leverage AI effectively? At what point does more knowledge stop returning value?
+- How do we preserve **collaboration** in an AI-augmented classroom — when AI can do individually what used to require a team?
