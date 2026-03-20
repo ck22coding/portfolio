@@ -1,6 +1,6 @@
 # Quarto
 /.quarto/
-/_site/
+# /_site/ — built by GitHub Actions, committed to repo
 /_book/
 /.quarto_cache/
 

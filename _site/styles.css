@@ -1,0 +1,907 @@
+/* ═══════════════════════════════════════════════════════════════
+   WARM EARTH PORTFOLIO
+   Sophisticated bento-box design with warm terracotta accents
+   Inspired by organic minimalism and refined craft
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Import distinctive fonts - DM Serif for warmth, Plus Jakarta Sans for clean body */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+/* ─────────────────────────────────────────────────────────────────
+   CSS Variables - Warm Earth Color System
+   ───────────────────────────────────────────────────────────────── */
+:root {
+  /* Core backgrounds - Warm cream canvas */
+  --bg-canvas: #E8E0D5;
+  --bg-cream: #F5F1EB;
+  --bg-warm: #DED4C6;
+
+  /* Card backgrounds - Earthy tones */
+  --card-tan: #B8A99A;
+  --card-taupe: #A69585;
+  --card-charcoal: #3D3D38;
+  --card-dark: #2A2A26;
+  --card-white: #FFFFFF;
+
+  /* Accent - Burnt Orange/Terracotta */
+  --accent: #E86A33;
+  --accent-soft: rgba(232, 106, 51, 0.15);
+  --accent-glow: rgba(232, 106, 51, 0.4);
+  --accent-light: #F07A2F;
+
+  /* Text hierarchy */
+  --text-dark: #1A1A18;
+  --text-primary: #2D2D2A;
+  --text-secondary: #5C5C56;
+  --text-muted: #8A8A82;
+  --text-light: #F5F1EB;
+  --text-on-dark: #E8E0D5;
+
+  /* Borders & lines */
+  --border-subtle: rgba(45, 45, 42, 0.08);
+  --border-medium: rgba(45, 45, 42, 0.15);
+  --border-accent: rgba(232, 106, 51, 0.4);
+
+  /* Typography */
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 3rem;
+  --space-xl: 5rem;
+
+  /* Border radius - Large for bento feel */
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-full: 50%;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Base Reset & Global Styles
+   ───────────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-canvas);
+  color: var(--text-primary);
+  line-height: 1.7;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* Subtle organic texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.02;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Typography - Warm & Refined
+   ───────────────────────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--text-dark);
+  margin-bottom: var(--space-sm);
+}
+
+h1 {
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 1.75rem;
+  color: var(--text-dark);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-xs);
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
+}
+
+h3 {
+  font-size: 1.35rem;
+  color: var(--text-primary);
+  margin-top: var(--space-md);
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
+p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-sm);
+  max-width: 60ch;
+  font-size: 1.05rem;
+}
+
+strong {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Navigation - Clean Floating Bar
+   ───────────────────────────────────────────────────────────────── */
+.navbar {
+  background: rgba(245, 241, 235, 0.9) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: var(--space-sm) 0;
+  transition: var(--transition-smooth);
+}
+
+.navbar-brand {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.35rem;
+  color: var(--text-dark) !important;
+  letter-spacing: 0.01em;
+}
+
+.navbar-brand:hover {
+  color: var(--accent) !important;
+}
+
+.navbar-nav {
+  gap: var(--space-xs);
+}
+
+.nav-link {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary) !important;
+  letter-spacing: 0.02em;
+  padding: 0.6rem 1.2rem !important;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-smooth);
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--text-dark) !important;
+  background: var(--bg-warm);
+}
+
+.nav-link.active {
+  color: var(--accent) !important;
+  background: var(--accent-soft);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Hero Banner - Warm & Inviting
+   ───────────────────────────────────────────────────────────────── */
+.hero-banner {
+  text-align: center;
+  padding: var(--space-xl) var(--space-md);
+  background: var(--card-tan);
+  border-radius: var(--radius-lg);
+  margin: var(--space-md);
+  margin-bottom: var(--space-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative organic shape */
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 60%;
+  height: 200%;
+  background: var(--card-taupe);
+  border-radius: 50%;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.hero-banner::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 40%;
+  height: 150%;
+  background: var(--card-taupe);
+  border-radius: 50%;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.hero-banner h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: var(--text-dark);
+  margin-bottom: var(--space-xs);
+  position: relative;
+  z-index: 1;
+}
+
+.hero-banner h2 {
+  font-size: 1rem;
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border: none;
+  margin-top: 0;
+  padding: 0;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+/* Profile image with warm styling */
+.hero-banner img,
+.hero-banner .rounded-circle {
+  border-radius: var(--radius-full);
+  border: 4px solid var(--card-white);
+  box-shadow: 0 8px 32px rgba(45, 45, 42, 0.15);
+  transition: var(--transition-smooth);
+  position: relative;
+  z-index: 1;
+}
+
+.hero-banner img:hover,
+.hero-banner .rounded-circle:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 48px rgba(45, 45, 42, 0.2);
+}
+
+/* Social buttons - Warm style */
+.hero-banner .btn {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--radius-sm);
+  margin: 0.3rem;
+  transition: var(--transition-smooth);
+  text-decoration: none !important;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-banner .btn-outline-primary {
+  color: var(--text-dark) !important;
+  border: 2px solid var(--text-dark);
+  background: transparent;
+}
+
+.hero-banner .btn-outline-primary:hover {
+  background: var(--text-dark);
+  color: var(--text-light) !important;
+  border-color: var(--text-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(45, 45, 42, 0.2);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Main Content Area
+   ───────────────────────────────────────────────────────────────── */
+.quarto-container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+main {
+  padding: var(--space-md) 0 var(--space-xl);
+}
+
+#quarto-content {
+  background: transparent;
+}
+
+/* Hide default title block */
+.quarto-title-block {
+  display: none;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Cards & Bento Grid - The Heart of the Design
+   ───────────────────────────────────────────────────────────────── */
+.grid {
+  gap: var(--space-md);
+  margin: var(--space-md) 0;
+}
+
+.g-col-12.g-col-md-6,
+.card {
+  background: var(--card-white);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-md);
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(45, 45, 42, 0.04);
+}
+
+.g-col-12.g-col-md-6 h3 {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+
+.g-col-12.g-col-md-6 p,
+.g-col-12.g-col-md-6 em {
+  margin-bottom: 0;
+}
+
+/* Alternate card styles for visual interest */
+.g-col-12.g-col-md-6:nth-child(odd) {
+  background: var(--card-charcoal);
+  color: var(--text-on-dark);
+}
+
+.g-col-12.g-col-md-6:nth-child(odd) h3,
+.g-col-12.g-col-md-6:nth-child(odd) strong {
+  color: var(--text-light);
+}
+
+.g-col-12.g-col-md-6:nth-child(odd) p,
+.g-col-12.g-col-md-6:nth-child(odd) li {
+  color: var(--text-on-dark);
+  opacity: 0.85;
+}
+
+.g-col-12.g-col-md-6:hover,
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(45, 45, 42, 0.12);
+}
+
+/* Accent highlight on cards */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: var(--transition-smooth);
+}
+
+.card:hover::before {
+  transform: scaleX(1);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Links - Warm & Subtle
+   ───────────────────────────────────────────────────────────────── */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+a:hover {
+  color: var(--text-dark);
+}
+
+/* Content links with underline effect */
+main p a,
+main li a {
+  position: relative;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+main p a::after,
+main li a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--transition-smooth);
+}
+
+main p a:hover::after,
+main li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Lists - Clean & Structured
+   ───────────────────────────────────────────────────────────────── */
+ul, ol {
+  margin-bottom: var(--space-md);
+  padding-left: var(--space-md);
+}
+
+li {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xs);
+  position: relative;
+  font-size: 1.05rem;
+}
+
+ul li::marker {
+  color: var(--accent);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Buttons - Refined & Tactile
+   ───────────────────────────────────────────────────────────────── */
+.btn {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-smooth);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--card-white);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: var(--text-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(45, 45, 42, 0.15);
+}
+
+.btn-outline-primary {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+.btn-outline-primary:hover {
+  background: var(--accent);
+  color: var(--card-white);
+  border-color: var(--accent);
+}
+
+.btn-outline-dark {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 2px solid var(--border-medium);
+}
+
+.btn-outline-dark:hover {
+  color: var(--text-dark);
+  border-color: var(--text-dark);
+  background: var(--bg-warm);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Code Blocks - Warm Terminal Style
+   ───────────────────────────────────────────────────────────────── */
+pre, code {
+  font-family: 'JetBrains Mono', 'SF Mono', monospace;
+}
+
+pre {
+  background: var(--card-charcoal);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  margin: var(--space-md) 0;
+  overflow-x: auto;
+  position: relative;
+}
+
+code {
+  font-size: 0.9em;
+  color: var(--accent);
+}
+
+pre code {
+  color: var(--text-on-dark);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Tables - Clean & Modern
+   ───────────────────────────────────────────────────────────────── */
+table {
+  width: 100%;
+  margin: var(--space-md) 0;
+  border-collapse: collapse;
+  background: var(--card-white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+th, td {
+  padding: var(--space-sm) var(--space-md);
+  text-align: left;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+th {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  background: var(--bg-cream);
+}
+
+td {
+  color: var(--text-secondary);
+}
+
+tr:hover td {
+  background: var(--accent-soft);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Images - Soft & Warm
+   ───────────────────────────────────────────────────────────────── */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Footer - Minimal & Warm
+   ───────────────────────────────────────────────────────────────── */
+.nav-footer {
+  background: var(--bg-warm);
+  border-top: none;
+  padding: var(--space-lg) 0;
+  margin-top: var(--space-xl);
+}
+
+.nav-footer-center {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Search - Warm Style
+   ───────────────────────────────────────────────────────────────── */
+#quarto-search {
+  --bs-body-color: var(--text-secondary);
+}
+
+.search-input {
+  background: var(--card-white) !important;
+  border: 2px solid var(--border-subtle) !important;
+  color: var(--text-primary) !important;
+  border-radius: var(--radius-sm) !important;
+}
+
+.search-input:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 3px var(--accent-soft) !important;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Sidebar / TOC - Clean Right-aligned
+   ───────────────────────────────────────────────────────────────── */
+.sidebar {
+  background: transparent;
+}
+
+#quarto-margin-sidebar {
+  margin-left: auto;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0.5rem !important;
+  right: 0;
+}
+
+#quarto-margin-sidebar .toc-actions,
+#quarto-margin-sidebar nav#TOC {
+  padding-left: 0;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.sidebar nav[role="doc-toc"] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.sidebar nav[role="doc-toc"] h2 {
+  font-size: 0.8rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  padding-left: 0;
+}
+
+.sidebar nav[role="doc-toc"] ul {
+  padding-left: 0;
+}
+
+.sidebar nav[role="doc-toc"] ul li a {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  transition: var(--transition-fast);
+  padding-left: 0.75rem;
+  border-left: 2px solid transparent;
+}
+
+.sidebar nav[role="doc-toc"] ul li a:hover {
+  color: var(--accent);
+  border-left-color: var(--accent);
+}
+
+.sidebar nav[role="doc-toc"] ul li a.active {
+  color: var(--accent);
+  border-left-color: var(--accent);
+  font-weight: 500;
+}
+
+.page-columns .content {
+  grid-column-gap: 1rem;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Scrollbar - Warm Minimal Style
+   ───────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-warm);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--card-taupe);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--card-tan);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Selection - Orange Accent
+   ───────────────────────────────────────────────────────────────── */
+::selection {
+  background: var(--accent);
+  color: var(--card-white);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Animations - Smooth & Organic
+   ───────────────────────────────────────────────────────────────── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+main {
+  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-banner {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Staggered card animations */
+.g-col-12.g-col-md-6:nth-child(1) { animation-delay: 0.1s; }
+.g-col-12.g-col-md-6:nth-child(2) { animation-delay: 0.2s; }
+.g-col-12.g-col-md-6:nth-child(3) { animation-delay: 0.3s; }
+.g-col-12.g-col-md-6:nth-child(4) { animation-delay: 0.4s; }
+
+.g-col-12.g-col-md-6 {
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Responsive Design
+   ───────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  :root {
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+  }
+
+  .quarto-container {
+    padding: 0 var(--space-sm);
+  }
+
+  .hero-banner {
+    padding: var(--space-lg) var(--space-sm);
+    margin: var(--space-sm);
+    border-radius: var(--radius-md);
+  }
+
+  .hero-banner::before,
+  .hero-banner::after {
+    opacity: 0.2;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .grid {
+    gap: var(--space-sm);
+  }
+
+  .g-col-12.g-col-md-6,
+  .card {
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Quarto-specific Overrides
+   ───────────────────────────────────────────────────────────────── */
+.quarto-light {
+  --bs-body-bg: var(--bg-canvas);
+  --bs-body-color: var(--text-primary);
+}
+
+/* Override Bootstrap primary color */
+.text-primary {
+  color: var(--accent) !important;
+}
+
+.bg-primary {
+  background-color: var(--accent) !important;
+}
+
+.border-primary {
+  border-color: var(--accent) !important;
+}
+
+/* Fix navbar toggle */
+.navbar-toggler {
+  border-color: var(--border-medium);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.navbar-toggler-icon {
+  filter: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(45, 45, 42, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Dropdown menus */
+.dropdown-menu {
+  background: var(--card-white);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 8px 32px rgba(45, 45, 42, 0.1);
+}
+
+.dropdown-item {
+  color: var(--text-secondary);
+  padding: 0.6rem 1rem;
+}
+
+.dropdown-item:hover {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Company Logos in Experience Cards
+   ───────────────────────────────────────────────────────────────── */
+.company-logo {
+  height: 40px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  margin-bottom: var(--space-sm);
+  border-radius: 4px;
+  opacity: 0.9;
+  transition: var(--transition-smooth);
+}
+
+.g-col-12.g-col-md-6:nth-child(odd) .company-logo {
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+}
+
+.g-col-12.g-col-md-6:hover .company-logo {
+  opacity: 1;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Special Bento Card Variants
+   ───────────────────────────────────────────────────────────────── */
+
+/* Stats/Metric cards */
+.metric-card {
+  background: var(--accent);
+  color: var(--card-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+}
+
+.metric-card h2,
+.metric-card h3 {
+  color: var(--card-white);
+  border: none;
+}
+
+/* Feature highlight card */
+.feature-card {
+  background: linear-gradient(135deg, var(--card-tan) 0%, var(--card-taupe) 100%);
+  color: var(--text-dark);
+}
+
+/* Progress/Status indicator */
+.progress-ring {
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+}
+
+.progress-ring-bg {
+  stroke: var(--border-subtle);
+  fill: none;
+  stroke-width: 8;
+}
