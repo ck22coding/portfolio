@@ -1,6 +1,6 @@
 # Quarto
 /.quarto/
-# /_site/  # Commented out to allow Vercel deployment
+/_site/
 /_book/
 /.quarto_cache/
 
