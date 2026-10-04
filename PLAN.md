@@ -4,15 +4,23 @@ Written 2026-10-04. Branch `worktree-revamp`, worktree `.claude/worktrees/revamp
 Git in this worktree: use `/usr/bin/git` as single plain commands (the rtk hook breaks compound git commands).
 Dev server: `npm --prefix <worktree> run dev -- --port 5173 --strictPort`.
 
-## Inputs needed from Carter
+## Status (2026-10-04)
 
-- [ ] X handle (not found in local files) — blocks the X icon in the nav.
-- [ ] URLs of the LinkedIn and X posts for the media section.
-- [ ] Which private projects are cleared to show (see phase 5), and screenshots or permission to capture them.
+Phases 1–5 are built on this branch. Phase 6 is not started.
+
+Still needed from Carter:
+
+- [ ] X profile URL → `profile.links.x` in `src/content.ts` (the icon is hidden until set).
+- [ ] LinkedIn and X post URLs → `media` in `src/content.ts` (the Media nav item is hidden until there is one).
+- [ ] Screenshots for project covers (still generated gradients).
 - [ ] Whether to make `mode-memory` public on GitHub.
-- [ ] Activity squares: GitHub, Claude Code, or both (phase 3).
+- [ ] Confirm the Eight Faces and venture fund pages are cleared with the client and Foundry before this branch goes live.
 
-Work that does not depend on these proceeds; missing items get a clearly marked placeholder in `src/content.ts`.
+Decisions made while building (change if wrong):
+
+- Activity squares show both sources behind a toggle. Refresh is a local script (`scripts/activity.py`); the scheduled GitHub Action was not added.
+- Case pages built for: venture fund engagement (Topsail, client unnamed), Eight Faces, Companion, Balkanski, Locker. Shifts, AI LMS, and Knowledge Tree were not added.
+- LinkedIn posts use the site's own card, not the LinkedIn iframe.
 
 ## Phase 1 — Nav icons
 

@@ -1,4 +1,5 @@
-import { useSyncExternalStore } from 'react'
+import { useSyncExternalStore, type Key, type ReactNode } from 'react'
+import { Link } from 'react-router-dom'
 import {
   SiClaude,
   SiExpo,
@@ -11,30 +12,52 @@ import {
   SiTurborepo,
   SiVercel
 } from 'react-icons/si'
+import Activity from '../components/Activity'
 import AccordionGallery from '../components/reactbits/AccordionGallery'
 import CountUp from '../components/reactbits/CountUp'
-import LogoLoop from '../components/reactbits/LogoLoop'
-import { cover, experience, profile, projects } from '../content'
+import LogoLoop, { type LogoItem } from '../components/reactbits/LogoLoop'
+import { cover, experience, profile, projectHref, projects, tools } from '../content'
 import stats from '../stats.json'
 
 const wordmark = (text: string) => <span className="font-display text-[22px] font-bold tracking-tight">{text}</span>
 
-const TOOLS = [
-  { node: <SiClaude title="Claude" />, title: 'Claude' },
-  { node: <SiVercel title="Vercel" />, title: 'Vercel' },
-  { node: wordmark('Codex'), title: 'Codex' },
-  { node: wordmark('AI SDK'), title: 'AI SDK' },
-  { node: <SiTurborepo title="Turborepo" />, title: 'Turborepo' },
-  { node: <SiLangchain title="LangChain" />, title: 'LangChain' },
-  { node: <SiLanggraph title="LangGraph" />, title: 'LangGraph' },
-  { node: <SiModelcontextprotocol title="Model Context Protocol" />, title: 'Model Context Protocol' },
-  { node: <SiNextdotjs title="Next.js" />, title: 'Next.js' },
-  { node: <SiSupabase title="Supabase" />, title: 'Supabase' },
-  { node: <SiFastapi title="FastAPI" />, title: 'FastAPI' },
-  { node: <SiExpo title="Expo" />, title: 'Expo' }
-]
+// Tools without an icon here fall back to a text wordmark.
+const TOOL_ICONS: Record<string, ReactNode> = {
+  Claude: <SiClaude aria-hidden="true" />,
+  Vercel: <SiVercel aria-hidden="true" />,
+  Turborepo: <SiTurborepo aria-hidden="true" />,
+  LangChain: <SiLangchain aria-hidden="true" />,
+  LangGraph: <SiLanggraph aria-hidden="true" />,
+  'Model Context Protocol': <SiModelcontextprotocol aria-hidden="true" />,
+  'Next.js': <SiNextdotjs aria-hidden="true" />,
+  Supabase: <SiSupabase aria-hidden="true" />,
+  FastAPI: <SiFastapi aria-hidden="true" />,
+  Expo: <SiExpo aria-hidden="true" />
+}
 
-const GALLERY = projects.map(p => ({ image: cover(p.hue), label: p.label, link: p.link, alt: '' }))
+const TOOLS = tools.map(t => ({ node: TOOL_ICONS[t.name] ?? wordmark(t.name), title: t.name, href: t.href }))
+
+// The loop repeats the list to fill the track; only the first copy stays in the tab order.
+const renderTool = (item: LogoItem, key: Key) => (
+  <a
+    href={item.href}
+    target="_blank"
+    rel="noreferrer noopener"
+    aria-label={item.title}
+    tabIndex={String(key).startsWith('0-') ? undefined : -1}
+    className="group/tool relative flex h-[34px] items-center rounded"
+  >
+    {'node' in item && item.node}
+    <span
+      aria-hidden="true"
+      className="pointer-events-none absolute top-full left-1/2 mt-3 -translate-x-1/2 rounded bg-panel px-2 py-1 font-sans text-xs whitespace-nowrap text-ink opacity-0 transition-opacity group-hover/tool:opacity-100 group-focus-visible/tool:opacity-100"
+    >
+      {item.title}
+    </span>
+  </a>
+)
+
+const GALLERY = projects.map(p => ({ image: cover(p.hue), label: p.label, link: projectHref(p), alt: '' }))
 
 // The gallery stacks its panels under 520px, so it needs the matching orientation there.
 const narrow = '(max-width: 520px)'
@@ -97,8 +120,15 @@ export default function Home() {
             fadeOut
             fadeOutColor="#0b0b0f"
             ariaLabel="Tools I work with"
+            renderItem={renderTool}
+            className="pb-12"
           />
         </div>
+      </section>
+
+      <section>
+        <SectionTitle>Activity</SectionTitle>
+        <Activity />
       </section>
 
       <section>
@@ -106,19 +136,29 @@ export default function Home() {
         <AccordionGallery
           items={GALLERY}
           orientation={isNarrow ? 'vertical' : 'horizontal'}
-          height={isNarrow ? 320 : 440}
+          height={isNarrow ? 64 * projects.length : 440}
           accentColor="#c8ff5c"
           grayscale={false}
         />
         <ul className="mt-6 grid gap-x-8 gap-y-3 sm:grid-cols-2">
-          {projects.map(p => (
-            <li key={p.link} className="text-sm text-muted">
-              <a className="font-medium text-ink underline decoration-white/25 underline-offset-4 hover:decoration-accent" href={p.link}>
-                {p.label}
-              </a>{' '}
-              — {p.blurb}
-            </li>
-          ))}
+          {projects.map(p => {
+            const href = projectHref(p)
+            const link = 'font-medium text-ink underline decoration-white/25 underline-offset-4 hover:decoration-accent'
+            return (
+              <li key={p.slug} className="text-sm text-muted">
+                {href.startsWith('/') ? (
+                  <Link className={link} to={href}>
+                    {p.label}
+                  </Link>
+                ) : (
+                  <a className={link} href={href}>
+                    {p.label}
+                  </a>
+                )}{' '}
+                — {p.blurb} <span className="whitespace-nowrap text-accent">({p.status})</span>
+              </li>
+            )
+          })}
         </ul>
       </section>
 

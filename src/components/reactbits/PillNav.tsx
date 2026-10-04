@@ -8,6 +8,7 @@ export type PillNavItem = {
   label: string;
   href: string;
   ariaLabel?: string;
+  icon?: React.ReactNode;
 };
 
 export interface PillNavProps {
@@ -332,7 +333,7 @@ const PillNav: React.FC<PillNavProps> = ({
                       className="pill-label relative z-[2] inline-block leading-[1]"
                       style={{ willChange: 'transform' }}
                     >
-                      {item.label}
+                      {item.icon ?? item.label}
                     </span>
                     <span
                       className="pill-label-hover absolute left-0 top-0 z-[3] inline-block"
@@ -342,7 +343,7 @@ const PillNav: React.FC<PillNavProps> = ({
                       }}
                       aria-hidden="true"
                     >
-                      {item.label}
+                      {item.icon ?? item.label}
                     </span>
                   </span>
                   {isActive && (
@@ -451,7 +452,10 @@ const PillNav: React.FC<PillNavProps> = ({
                     onMouseLeave={hoverOut}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    {item.label}
+                    <span className="flex items-center gap-3">
+                      {item.icon}
+                      {item.label}
+                    </span>
                   </Link>
                 ) : (
                   <a
@@ -462,7 +466,10 @@ const PillNav: React.FC<PillNavProps> = ({
                     onMouseLeave={hoverOut}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    {item.label}
+                    <span className="flex items-center gap-3">
+                      {item.icon}
+                      {item.label}
+                    </span>
                   </a>
                 )}
               </li>
