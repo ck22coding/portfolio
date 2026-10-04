@@ -70,3 +70,10 @@ $RECYCLE.BIN/
 *.tmp
 *.temp
 **/*.quarto_ipynb
+
+# Vite build
+node_modules/
+dist/
+.vercel/
+test-results/
+playwright-report/

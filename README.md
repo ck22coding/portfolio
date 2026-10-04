@@ -1,6 +1,27 @@
 # Portfolio
 
-Carter King's personal site. Being rebuilt from scratch.
+Carter King's personal site. Vite + React + TypeScript + Tailwind, with components from [React Bits](https://reactbits.dev).
+
+## Run
+
+```bash
+npm install
+npm run dev      # local dev server
+npm run build    # type-check and build to dist/
+npm test         # Playwright + axe-core accessibility checks (builds first)
+```
+
+## Edit
+
+- `src/content.ts` — all copy and data: profile, projects, experience, skills.
+- `src/stats.json` — the lines-of-code figure. Regenerate with `python3 scripts/loc.py` (reads local clones on this Mac).
+- `src/pages/` — `Home.tsx` and `Skills.tsx`.
+- `src/components/reactbits/` — React Bits component sources, copied from the registry. To add another:
+  download `https://reactbits.dev/r/<Name>-TS-TW.json` and save its file content here, then install its `dependencies`.
+
+## Deploy
+
+Static build in `dist/`. `vercel.json` rewrites every path to `index.html` so `/skills` loads directly.
 
 ## Archive
 
