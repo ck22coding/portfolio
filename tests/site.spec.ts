@@ -15,6 +15,12 @@ for (const path of ['/', '/skills', '/media', ...casePages.map(projectHref)]) {
   })
 }
 
+test('home heading keeps the tagline as text beside the canvas version', async ({ page }) => {
+  await page.goto('/')
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText(`${profile.name} ${profile.tagline}`)
+  await expect(page.locator(`[aria-hidden="true"] [aria-label="${profile.tagline}"] canvas`)).toBeVisible()
+})
+
 test('home counts up to the committed line total', async ({ page }) => {
   await page.goto('/')
   const total = stats.linesOfCode.toLocaleString('en-US')

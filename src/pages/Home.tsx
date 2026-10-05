@@ -16,6 +16,7 @@ import Activity from '../components/Activity'
 import AccordionGallery from '../components/reactbits/AccordionGallery'
 import CountUp from '../components/reactbits/CountUp'
 import LogoLoop, { type LogoItem } from '../components/reactbits/LogoLoop'
+import TechText from '../components/reactbits/TechText'
 import { cover, experience, profile, projectHref, projects, tools } from '../content'
 import stats from '../stats.json'
 
@@ -68,6 +69,10 @@ const subscribeNarrow = (cb: () => void) => {
 }
 const useNarrow = () => useSyncExternalStore(subscribeNarrow, () => window.matchMedia(narrow).matches)
 
+// Tech Text draws on a canvas and cannot wrap, so phones get the tagline as two lines.
+const words = profile.tagline.split(' ')
+const TAGLINE_LINES = [words.slice(0, 2).join(' '), words.slice(2).join(' ')]
+
 function SectionTitle({ children }: { children: string }) {
   return <h2 className="mb-6 font-display text-sm font-medium tracking-[0.2em] text-muted uppercase">{children}</h2>
 }
@@ -79,8 +84,23 @@ export default function Home() {
       <section className="pt-10 md:pt-16">
         <h1 className="font-display text-5xl leading-[1.05] font-bold tracking-tight md:text-7xl">
           {profile.name}
-          <span className="block text-accent">{profile.tagline}</span>
+          <span className="sr-only"> {profile.tagline}</span>
         </h1>
+        <div aria-hidden="true" className="-mx-5 font-display">
+          {(isNarrow ? TAGLINE_LINES : [profile.tagline]).map(line => (
+            <TechText
+              key={line}
+              text={line}
+              align="left"
+              fontSize={isNarrow ? 48 : 72}
+              fontWeight={700}
+              letterSpacing={-0.025}
+              color="#c8ff5c"
+              accentColor="#ededf0"
+              style={{ height: isNarrow ? 72 : 108 }}
+            />
+          ))}
+        </div>
         <p className="mt-6 max-w-xl text-lg text-muted">{profile.intro}</p>
       </section>
 
