@@ -54,8 +54,8 @@ export default function Activity() {
           data={activity[source]}
           colorScheme="dark"
           theme={{ dark: ['#1f1f29', '#c8ff5c'] }}
-          blockSize={13}
-          blockMargin={4}
+          blockSize={11}
+          blockMargin={3}
           fontSize={13}
           labels={{ totalCount: `${total} ${unit} since ${SINCE}` }}
           tooltips={{ activity: { text: a => `${a.count.toLocaleString('en-US')} ${unit} on ${a.date}` } }}

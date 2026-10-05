@@ -77,6 +77,15 @@ function SectionTitle({ children }: { children: string }) {
   return <h2 className="mb-6 font-display text-sm font-medium tracking-[0.2em] text-muted uppercase">{children}</h2>
 }
 
+function Stat({ label, children }: { label: string; children: ReactNode }) {
+  return (
+    <p className="text-sm text-muted">
+      <span className="block font-display text-2xl font-bold text-ink tabular-nums sm:text-4xl">{children}</span>
+      {label}
+    </p>
+  )
+}
+
 export default function Home() {
   const isNarrow = useNarrow()
   return (
@@ -105,30 +114,6 @@ export default function Home() {
         <p className="mt-6 max-w-xl text-lg text-muted">{profile.intro}</p>
       </section>
 
-      <section aria-label="By the numbers" className="grid gap-8 sm:grid-cols-3">
-        <div className="sm:col-span-2">
-          <p className="font-display text-6xl font-bold tabular-nums md:text-8xl">
-            <span aria-hidden="true">
-              <CountUp to={stats.linesOfCode} separator="," duration={2} />
-            </span>
-            <span className="sr-only">{stats.linesOfCode.toLocaleString('en-US')}</span>
-          </p>
-          <p className="mt-2 text-muted">lines of code committed</p>
-        </div>
-        <div className="flex flex-col justify-end gap-1 text-muted">
-          <p>
-            <span className="text-ink">{stats.commits.toLocaleString('en-US')}</span> commits
-          </p>
-          <p>
-            <span className="text-ink">{stats.repos}</span> repositories
-          </p>
-          <p className="text-sm">
-            Lines added in code files, excluding lockfiles, build output, and other people&rsquo;s repos. As of{' '}
-            {stats.asOf}.
-          </p>
-        </div>
-      </section>
-
       <section>
         <SectionTitle>Tools</SectionTitle>
         <div className="text-ink">
@@ -149,7 +134,23 @@ export default function Home() {
 
       <section>
         <SectionTitle>Activity</SectionTitle>
-        <Activity />
+        <div className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,1fr)_13rem]">
+          <Activity />
+          <div role="group" aria-label="By the numbers" className="grid grid-cols-3 content-start gap-x-4 gap-y-5 lg:grid-cols-1">
+            <Stat label="lines of code">
+              <span aria-hidden="true">
+                <CountUp to={stats.linesOfCode} separator="," duration={2} />
+              </span>
+              <span className="sr-only">{stats.linesOfCode.toLocaleString('en-US')}</span>
+            </Stat>
+            <Stat label="commits">{stats.commits.toLocaleString('en-US')}</Stat>
+            <Stat label="repositories">{stats.repos}</Stat>
+            <p className="col-span-full text-sm text-muted">
+              Lines added in code files, excluding lockfiles, build output, and other people&rsquo;s repos. As of{' '}
+              {stats.asOf}.
+            </p>
+          </div>
+        </div>
       </section>
 
       <section>

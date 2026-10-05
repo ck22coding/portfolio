@@ -49,7 +49,7 @@ const FALLOFF_STEPS = 8;
 const SPRING = 320;
 const DAMPING = 22;
 // Local addition, sweep="once": seconds to cross the whole word, then seconds to settle before the loop stops.
-const CROSSING = 1.8;
+const CROSSING = 3.6;
 const SETTLE = 0.6;
 // Room kept beside left-aligned text for the selection frame and specks.
 const EDGE = 20;

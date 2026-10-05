@@ -24,7 +24,10 @@ test('home heading keeps the tagline as text beside the canvas version', async (
 test('home counts up to the committed line total', async ({ page }) => {
   await page.goto('/')
   const total = stats.linesOfCode.toLocaleString('en-US')
-  await expect(page.getByLabel('By the numbers').locator('[aria-hidden="true"]')).toHaveText(total, { timeout: 20_000 })
+  const counter = page.getByLabel('By the numbers').locator('[aria-hidden="true"]')
+  // The counter starts when it scrolls into view.
+  await counter.scrollIntoViewIfNeeded()
+  await expect(counter).toHaveText(total, { timeout: 20_000 })
 })
 
 test('gallery panels link to each project repo or case page', async ({ page }) => {
