@@ -38,13 +38,16 @@ test('gallery panels link to each project repo or case page', async ({ page }) =
   }
 })
 
-test('only the open gallery panel refines its image, and it finishes', async ({ page }) => {
+test('closed gallery panels stay coarse; the open one refines its image and finishes', async ({ page }) => {
   await page.goto('/')
   const gallery = page.getByRole('list', { name: 'Image accordion gallery' })
   const frames = gallery.locator('[data-status]')
   const open = gallery.locator('[aria-current="true"]')
   await expect(frames).toHaveCount(1)
   await expect(open.locator('[data-status="complete"][data-resolved]')).toHaveCount(1)
+  // Closed panels show only the coarse canvas, with no image on top.
+  await expect(gallery.locator('img')).toHaveCount(1)
+  await expect(gallery.locator('canvas.absolute:not(.pointer-events-none)')).toHaveCount(projects.length)
 
   await gallery.getByRole('listitem', { name: projects[3].label, exact: true }).hover()
   await expect(open).toHaveAccessibleName(projects[3].label)

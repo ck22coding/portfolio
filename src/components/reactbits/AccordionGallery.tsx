@@ -34,7 +34,52 @@ export interface AccordionGalleryProps {
   className?: string;
 }
 
-// Local addition: the open panel's image resolves through Refine Frame's stages.
+// Local addition: closed panels show their image at Refine Frame's coarsest level,
+// and the open panel resolves from there through the frame's stages.
+const COARSE_BLOCK = 48;
+
+const Coarse = ({ src }: { src: string }) => {
+  const ref = useRef<HTMLCanvasElement>(null);
+  useEffect(() => {
+    const canvas = ref.current;
+    if (!canvas) return undefined;
+    const img = new Image();
+    // One canvas pixel per block, stretched back up without smoothing.
+    const draw = () => {
+      const W = canvas.offsetWidth;
+      const H = canvas.offsetHeight;
+      if (!W || !H || !img.naturalWidth) return;
+      canvas.width = Math.max(1, Math.round(W / COARSE_BLOCK));
+      canvas.height = Math.max(1, Math.round(H / COARSE_BLOCK));
+      const cover = Math.max(W / img.naturalWidth, H / img.naturalHeight);
+      const sw = W / cover;
+      const sh = H / cover;
+      canvas
+        .getContext('2d')
+        ?.drawImage(
+          img,
+          (img.naturalWidth - sw) / 2,
+          (img.naturalHeight - sh) / 2,
+          sw,
+          sh,
+          0,
+          0,
+          canvas.width,
+          canvas.height
+        );
+    };
+    img.onload = draw;
+    img.src = src;
+    const ro = new ResizeObserver(draw);
+    ro.observe(canvas);
+    return () => {
+      ro.disconnect();
+      img.onload = null;
+    };
+  }, [src]);
+  return <canvas ref={ref} className="absolute inset-0 h-full w-full [image-rendering:pixelated]" aria-hidden="true" />;
+};
+
 const REFINE_STAGE = 180;
 const REFINE_STEPS: [RefineFrameStatus, number][] = [
   ['generating', 100],
@@ -49,12 +94,12 @@ const Refined = ({ children }: { children: ReactNode }) => {
     return () => timers.forEach(clearTimeout);
   }, []);
   return (
-    <span className="block h-full w-full" aria-hidden="true">
+    <span className="absolute inset-0" aria-hidden="true">
       <RefineFrame
         status={status}
-        className="h-full w-full! aspect-auto!"
+        className="h-full w-full! aspect-auto! [&:not([data-mosaic])]:opacity-0"
         radius={0}
-        background="#0a0713"
+        background="transparent"
         stageDuration={REFINE_STAGE}
         showStatus={false}
       >
@@ -294,7 +339,15 @@ const AccordionGallery = ({
                   willChange: 'transform, filter'
                 }}
               >
-                {refine && isActive && !prefersReduced ? <Refined>{image}</Refined> : image}
+                {refine ? (
+                  <>
+                    <Coarse src={item.image} />
+                    {isActive &&
+                      (prefersReduced ? <span className="absolute inset-0">{image}</span> : <Refined>{image}</Refined>)}
+                  </>
+                ) : (
+                  image
+                )}
               </span>
               <span
                 className="pointer-events-none absolute inset-0"
