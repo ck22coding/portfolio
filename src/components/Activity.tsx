@@ -1,5 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties, type ReactNode } from 'react'
 import { ActivityCalendar } from 'react-activity-calendar'
+import { FaGithub } from 'react-icons/fa6'
+import { SiClaude } from 'react-icons/si'
 import 'react-activity-calendar/tooltips.css'
 import activity from '../activity.json'
 import GlideSelect from './reactbits/GlideSelect'
@@ -25,7 +27,25 @@ const SOURCES = {
 
 type Source = keyof typeof SOURCES
 
-const OPTIONS = (Object.keys(SOURCES) as Source[]).map(value => ({ value, label: SOURCES[value].label }))
+const LOGOS = {
+  github: <FaGithub key="github" size={14} aria-hidden="true" />,
+  claude: (
+    <span key="claude" aria-hidden="true" className="grid size-3.5 place-items-center rounded-full bg-[#d97757]">
+      <SiClaude size={9} />
+    </span>
+  )
+}
+
+// The selector shows logos; the name stays in the markup for screen readers.
+const OPTIONS = (Object.keys(SOURCES) as Source[]).map(value => ({
+  value,
+  label: (
+    <span className="flex items-center gap-1">
+      <span className="sr-only">{SOURCES[value].label}</span>
+      {value === 'both' ? [LOGOS.github, LOGOS.claude] : LOGOS[value]}
+    </span>
+  )
+}))
 
 // Levels 0-4: the empty square, then the accent at 25, 50, 75 and 100%.
 const COLORS = ['#1f1f29', '#495736', '#748f43', '#9ec74f', '#c8ff5c']
@@ -99,6 +119,7 @@ export default function Activity({ children }: { children: ReactNode }) {
             onChange={value => setSource(value as Source)}
             ariaLabel="Activity source"
             size="sm"
+            menuWidth={72}
             flip={false}
             accentColor="#c8ff5c"
             surfaceColor="#1f1f29"
