@@ -1,7 +1,8 @@
 'use client';
 
-import { useRef, useEffect, useState, useCallback, type CSSProperties, type KeyboardEvent, type MouseEvent } from 'react';
+import { useRef, useEffect, useState, useCallback, type CSSProperties, type KeyboardEvent, type MouseEvent, type ReactNode } from 'react';
 import { gsap } from 'gsap';
+import RefineFrame, { type RefineFrameStatus } from './RefineFrame';
 
 export interface AccordionGalleryItem {
   image: string;
@@ -29,8 +30,39 @@ export interface AccordionGalleryProps {
   trigger?: 'hover' | 'click';
   showLabels?: boolean;
   grayscale?: boolean;
+  refine?: boolean;
   className?: string;
 }
+
+// Local addition: the open panel's image resolves through Refine Frame's stages.
+const REFINE_STAGE = 180;
+const REFINE_STEPS: [RefineFrameStatus, number][] = [
+  ['generating', 100],
+  ['refining', 100 + REFINE_STAGE * 4],
+  ['complete', 100 + REFINE_STAGE * 7]
+];
+
+const Refined = ({ children }: { children: ReactNode }) => {
+  const [status, setStatus] = useState<RefineFrameStatus>('queued');
+  useEffect(() => {
+    const timers = REFINE_STEPS.map(([next, at]) => setTimeout(() => setStatus(next), at));
+    return () => timers.forEach(clearTimeout);
+  }, []);
+  return (
+    <span className="block h-full w-full" aria-hidden="true">
+      <RefineFrame
+        status={status}
+        className="h-full w-full! aspect-auto!"
+        radius={0}
+        background="#0a0713"
+        stageDuration={REFINE_STAGE}
+        showStatus={false}
+      >
+        {children}
+      </RefineFrame>
+    </span>
+  );
+};
 
 const DEFAULT_ITEMS: AccordionGalleryItem[] = [
   { image: 'https://picsum.photos/id/1015/900/1200', label: 'Canyon', link: '#' },
@@ -59,6 +91,7 @@ const AccordionGallery = ({
   trigger = 'hover',
   showLabels = true,
   grayscale = true,
+  refine = false,
   className = ''
 }: AccordionGalleryProps) => {
   const rootRef = useRef<HTMLDivElement>(null);
@@ -217,6 +250,14 @@ const AccordionGallery = ({
       {items.map((item, i) => {
         const isActive = i === active;
         const Tag = (item.link ? 'a' : 'div') as 'a';
+        const image = (
+          <img
+            src={item.image}
+            alt={item.alt || item.label || ''}
+            draggable={false}
+            className="block h-full w-full select-none object-cover [-webkit-user-drag:none]"
+          />
+        );
         return (
           <Tag
             key={i}
@@ -253,12 +294,7 @@ const AccordionGallery = ({
                   willChange: 'transform, filter'
                 }}
               >
-                <img
-                  src={item.image}
-                  alt={item.alt || item.label || ''}
-                  draggable={false}
-                  className="block h-full w-full select-none object-cover [-webkit-user-drag:none]"
-                />
+                {refine && isActive && !prefersReduced ? <Refined>{image}</Refined> : image}
               </span>
               <span
                 className="pointer-events-none absolute inset-0"

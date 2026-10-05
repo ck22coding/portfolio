@@ -38,6 +38,20 @@ test('gallery panels link to each project repo or case page', async ({ page }) =
   }
 })
 
+test('only the open gallery panel refines its image, and it finishes', async ({ page }) => {
+  await page.goto('/')
+  const gallery = page.getByRole('list', { name: 'Image accordion gallery' })
+  const frames = gallery.locator('[data-status]')
+  const open = gallery.locator('[aria-current="true"]')
+  await expect(frames).toHaveCount(1)
+  await expect(open.locator('[data-status="complete"][data-resolved]')).toHaveCount(1)
+
+  await gallery.getByRole('listitem', { name: projects[3].label, exact: true }).hover()
+  await expect(open).toHaveAccessibleName(projects[3].label)
+  await expect(frames).toHaveCount(1)
+  await expect(open.locator('[data-status="complete"][data-resolved]')).toHaveCount(1)
+})
+
 test('every case page shows its project and problem', async ({ page }) => {
   for (const p of casePages) {
     await page.goto(projectHref(p))

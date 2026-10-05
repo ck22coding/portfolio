@@ -161,6 +161,7 @@ export default function Home() {
           height={isNarrow ? 64 * projects.length : 440}
           accentColor="#c8ff5c"
           grayscale={false}
+          refine
         />
         <ul className="mt-6 grid gap-x-8 gap-y-3 sm:grid-cols-2">
           {projects.map(p => {
