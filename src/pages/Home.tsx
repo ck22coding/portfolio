@@ -79,8 +79,8 @@ function SectionTitle({ children }: { children: string }) {
 
 function Stat({ label, value }: { label: string; value: number }) {
   return (
-    <p className="text-sm text-muted">
-      <span className="block font-display text-2xl font-bold text-ink tabular-nums sm:text-4xl lg:leading-none">
+    <p className="text-sm text-muted lg:text-[length:calc(var(--squares)*0.09)] lg:leading-[1.25]">
+      <span className="block font-display text-2xl font-bold text-ink tabular-nums sm:text-4xl lg:text-[length:calc(var(--squares)*0.195)] lg:leading-none">
         <span aria-hidden="true">
           <CountUp to={value} separator="," duration={2} />
         </span>
@@ -139,14 +139,18 @@ export default function Home() {
 
       <section>
         <SectionTitle>Activity</SectionTitle>
-        <div className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,1fr)_auto]">
-          <Activity />
-          <div role="group" aria-label="By the numbers" className="grid grid-cols-3 content-start gap-x-4 gap-y-5 lg:flex lg:flex-col lg:justify-between lg:gap-y-2">
+        <Activity>
+          {/* On desktop this column spans the squares exactly; --squares and --labels come from Activity. */}
+          <div
+            role="group"
+            aria-label="By the numbers"
+            className="grid grid-cols-3 content-start gap-x-4 gap-y-5 lg:mt-(--labels) lg:flex lg:h-(--squares) lg:flex-col lg:justify-between lg:gap-0 lg:text-right"
+          >
             <Stat label="lines of code" value={stats.linesOfCode} />
             <Stat label="commits" value={stats.commits} />
             <Stat label="repositories" value={stats.repos} />
           </div>
-        </div>
+        </Activity>
       </section>
 
       <section>

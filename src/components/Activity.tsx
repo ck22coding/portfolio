@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties, type ReactNode } from 'react'
 import { ActivityCalendar } from 'react-activity-calendar'
 import 'react-activity-calendar/tooltips.css'
 import activity from '../activity.json'
@@ -36,6 +36,9 @@ const days = (new Date(both[both.length - 1].date).getTime() - first.getTime()) 
 const WEEKS = Math.ceil((first.getUTCDay() + days) / 7)
 // Smallest column pitch; below this the grid scrolls sideways.
 const MIN_PITCH = 14
+const FONT_SIZE = 13
+// Distance from the top of the calendar to the first row of squares (month labels plus spacing), as measured.
+const LABELS = FONT_SIZE + 10
 
 const count = (days: Map<string, Day>, date: string, unit: string) =>
   `${(days.get(date)?.count ?? 0).toLocaleString('en-US')} ${unit}`
@@ -48,7 +51,8 @@ const tooltip = (source: Source, date: string) => {
   return `${parts.filter(Boolean).join(', ')} on ${date}`
 }
 
-export default function Activity() {
+// `children` sits beside the grid on wide screens and can size itself from --squares and --labels.
+export default function Activity({ children }: { children: ReactNode }) {
   const [source, setSource] = useState<Source>('both')
   const [width, setWidth] = useState(0)
   const root = useRef<HTMLDivElement>(null)
@@ -71,41 +75,46 @@ export default function Activity() {
     if (scroller) scroller.scrollLeft = scroller.scrollWidth
   }, [source, pitch])
 
+  const sizes = { '--squares': `${7 * pitch - margin}px`, '--labels': `${LABELS}px` } as CSSProperties
+
   return (
-    <div ref={root} className="flex min-w-0 flex-col justify-between gap-3">
-      <ActivityCalendar
-        data={[...SOURCES[source].data]}
-        colorScheme="dark"
-        theme={{ dark: COLORS }}
-        blockSize={pitch - margin}
-        blockMargin={margin}
-        fontSize={13}
-        showTotalCount={false}
-        showColorLegend={false}
-        tooltips={{ activity: { text: a => tooltip(source, a.date) } }}
-      />
-      <div className="flex items-center justify-between gap-4">
-        <GlideSelect
-          className="[--gs-chip:22px]!"
-          options={OPTIONS}
-          value={source}
-          onChange={value => setSource(value as Source)}
-          ariaLabel="Activity source"
-          size="sm"
-          flip={false}
-          accentColor="#c8ff5c"
-          surfaceColor="#1f1f29"
-          highlightColor="#34343f"
-          textColor="#ededf0"
+    <div className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,1fr)_7.5rem]" style={sizes}>
+      <div ref={root} className="flex min-w-0 flex-col gap-3">
+        <ActivityCalendar
+          data={[...SOURCES[source].data]}
+          colorScheme="dark"
+          theme={{ dark: COLORS }}
+          blockSize={pitch - margin}
+          blockMargin={margin}
+          fontSize={FONT_SIZE}
+          showTotalCount={false}
+          showColorLegend={false}
+          tooltips={{ activity: { text: a => tooltip(source, a.date) } }}
         />
-        <p className="flex items-center gap-1 text-[13px] leading-[22px]">
-          <span className="mr-1.5">Less</span>
-          {COLORS.map(color => (
-            <span key={color} className="size-3 rounded-[2px]" style={{ background: color }} />
-          ))}
-          <span className="ml-1.5">More</span>
-        </p>
+        <div className="flex items-center justify-between gap-4">
+          <GlideSelect
+            className="[--gs-chip:22px]!"
+            options={OPTIONS}
+            value={source}
+            onChange={value => setSource(value as Source)}
+            ariaLabel="Activity source"
+            size="sm"
+            flip={false}
+            accentColor="#c8ff5c"
+            surfaceColor="#1f1f29"
+            highlightColor="#34343f"
+            textColor="#ededf0"
+          />
+          <p className="flex items-center gap-1 text-[13px] leading-[22px]">
+            <span className="mr-1.5">Less</span>
+            {COLORS.map(color => (
+              <span key={color} className="size-3 rounded-[2px]" style={{ background: color }} />
+            ))}
+            <span className="ml-1.5">More</span>
+          </p>
+        </div>
       </div>
+      {children}
     </div>
   )
 }
