@@ -11,8 +11,8 @@ const SOURCES = {
   },
   claude: {
     label: 'Claude Code',
-    unit: 'messages',
-    note: `Messages per day in Claude Code on one machine, tracked since 2026-03-23. Data through ${activity.claudeAsOf}.`
+    unit: 'prompts',
+    note: `Prompts I typed per day in Claude Code on one machine, from ${activity.claudeSince}. Data through ${activity.claudeAsOf}.`
   }
 } as const
 

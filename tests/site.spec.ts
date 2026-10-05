@@ -77,7 +77,7 @@ test('activity grid switches between GitHub and Claude Code', async ({ page }) =
   await expect(page.getByText(`${total(activity.github)} contributions in the last year`)).toBeVisible()
   await page.getByRole('button', { name: 'Claude Code' }).click()
   await expect(page.getByRole('button', { name: 'Claude Code' })).toHaveAttribute('aria-pressed', 'true')
-  await expect(page.getByText(`${total(activity.claude)} messages in the last year`)).toBeVisible()
+  await expect(page.getByText(`${total(activity.claude)} prompts in the last year`)).toBeVisible()
 })
 
 test('nav reaches the skills page and the tree selects a skill', async ({ page }) => {

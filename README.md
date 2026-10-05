@@ -19,7 +19,7 @@ npm run lighthouse   # Lighthouse CI: accessibility, best practices, SEO, perfor
   - Add a post: append to `media`. X posts need only the URL; LinkedIn posts need the text copied in. The Media nav item appears once there is one post.
   - Add a project: append to `projects`. Give it `repo` (public repo) or `page` (case page at `/projects/<slug>`).
 - `src/stats.json` — the lines-of-code figure. Regenerate with `python3 scripts/loc.py` (reads local clones on this Mac).
-- `src/activity.json` — the activity squares. Regenerate with `python3 scripts/activity.py` (GitHub through the `gh` CLI, Claude Code from `~/.claude/stats-cache.json` on this Mac). Only a date and a count per day are written.
+- `src/activity.json` — the activity squares. Regenerate with `python3 scripts/activity.py` (GitHub through the `gh` CLI, Claude Code prompts from `~/.claude/history.jsonl` on this Mac). Only a date and a count per day are written.
 - `src/pages/` — `Home.tsx`, `Skills.tsx`, `Media.tsx`, `ProjectPage.tsx`.
 - `src/components/reactbits/` — React Bits component sources, copied from the registry. To add another:
   download `https://reactbits.dev/r/<Name>-TS-TW.json` and save its file content here, then install its `dependencies`.
