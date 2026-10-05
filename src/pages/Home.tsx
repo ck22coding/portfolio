@@ -77,10 +77,15 @@ function SectionTitle({ children }: { children: string }) {
   return <h2 className="mb-6 font-display text-sm font-medium tracking-[0.2em] text-muted uppercase">{children}</h2>
 }
 
-function Stat({ label, children }: { label: string; children: ReactNode }) {
+function Stat({ label, value }: { label: string; value: number }) {
   return (
     <p className="text-sm text-muted">
-      <span className="block font-display text-2xl font-bold text-ink tabular-nums sm:text-4xl">{children}</span>
+      <span className="block font-display text-2xl font-bold text-ink tabular-nums sm:text-4xl">
+        <span aria-hidden="true">
+          <CountUp to={value} separator="," duration={2} />
+        </span>
+        <span className="sr-only">{value.toLocaleString('en-US')}</span>
+      </span>
       {label}
     </p>
   )
@@ -137,18 +142,9 @@ export default function Home() {
         <div className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,1fr)_13rem]">
           <Activity />
           <div role="group" aria-label="By the numbers" className="grid grid-cols-3 content-start gap-x-4 gap-y-5 lg:grid-cols-1">
-            <Stat label="lines of code">
-              <span aria-hidden="true">
-                <CountUp to={stats.linesOfCode} separator="," duration={2} />
-              </span>
-              <span className="sr-only">{stats.linesOfCode.toLocaleString('en-US')}</span>
-            </Stat>
-            <Stat label="commits">{stats.commits.toLocaleString('en-US')}</Stat>
-            <Stat label="repositories">{stats.repos}</Stat>
-            <p className="col-span-full text-sm text-muted">
-              Lines added in code files, excluding lockfiles, build output, and other people&rsquo;s repos. As of{' '}
-              {stats.asOf}.
-            </p>
+            <Stat label="lines of code" value={stats.linesOfCode} />
+            <Stat label="commits" value={stats.commits} />
+            <Stat label="repositories" value={stats.repos} />
           </div>
         </div>
       </section>

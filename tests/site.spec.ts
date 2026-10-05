@@ -21,13 +21,13 @@ test('home heading keeps the tagline as text beside the canvas version', async (
   await expect(page.locator(`[aria-hidden="true"] [aria-label="${profile.tagline}"] canvas`)).toBeVisible()
 })
 
-test('home counts up to the committed line total', async ({ page }) => {
+test('home counts up to the committed lines, commits and repositories', async ({ page }) => {
   await page.goto('/')
-  const total = stats.linesOfCode.toLocaleString('en-US')
-  const counter = page.getByLabel('By the numbers').locator('[aria-hidden="true"]')
-  // The counter starts when it scrolls into view.
-  await counter.scrollIntoViewIfNeeded()
-  await expect(counter).toHaveText(total, { timeout: 20_000 })
+  const counters = page.getByLabel('By the numbers').locator('[aria-hidden="true"]')
+  // The counters start when they scroll into view.
+  await counters.first().scrollIntoViewIfNeeded()
+  const totals = [stats.linesOfCode, stats.commits, stats.repos].map(n => n.toLocaleString('en-US'))
+  await expect(counters).toHaveText(totals, { timeout: 20_000 })
 })
 
 test('gallery panels link to each project repo or case page', async ({ page }) => {
@@ -81,13 +81,22 @@ test('activity data has one entry per day with a 0-4 level', () => {
   }
 })
 
-test('activity grid switches between GitHub and Claude Code', async ({ page }) => {
+test('activity grid shows both sources by default and each one on its own', async ({ page }) => {
   await page.goto('/')
-  const total = (days: { count: number }[]) => days.reduce((sum, d) => sum + d.count, 0).toLocaleString('en-US')
-  await expect(page.getByText(`${total(activity.github)} contributions since January 2026`)).toBeVisible()
-  await page.getByRole('button', { name: 'Claude Code' }).click()
-  await expect(page.getByRole('button', { name: 'Claude Code' })).toHaveAttribute('aria-pressed', 'true')
-  await expect(page.getByText(`${total(activity.claude)} prompts since January 2026`)).toBeVisible()
+  const active = (days: { date: string; level: number }[]) => new Set(days.filter(d => d.level > 0).map(d => d.date))
+  const github = active(activity.github)
+  const claude = active(activity.claude)
+  const select = page.getByRole('combobox', { name: 'Activity source' })
+  const filled = page.locator('.react-activity-calendar rect[data-level]:not([data-level="0"])')
+
+  await expect(select).toHaveText('GitHub + Claude Code')
+  await expect(filled).toHaveCount(new Set([...github, ...claude]).size)
+  for (const [label, days] of [['GitHub', github], ['Claude Code', claude]] as const) {
+    await select.click()
+    await page.getByRole('option', { name: label, exact: true }).click()
+    await expect(select).toHaveText(label)
+    await expect(filled).toHaveCount(days.size)
+  }
 })
 
 test('nav reaches the skills page and the tree selects a skill', async ({ page }) => {
