@@ -87,11 +87,12 @@ export default function Home() {
           <span className="sr-only"> {profile.tagline}</span>
         </h1>
         <div aria-hidden="true" className="-mx-5 font-display">
-          {(isNarrow ? TAGLINE_LINES : [profile.tagline]).map(line => (
+          {(isNarrow ? TAGLINE_LINES : [profile.tagline]).map((line, i, lines) => (
             <TechText
               key={line}
               text={line}
               align="left"
+              sweep={i === lines.length - 1 && 'once'}
               fontSize={isNarrow ? 48 : 72}
               fontWeight={700}
               letterSpacing={-0.025}

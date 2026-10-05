@@ -35,7 +35,7 @@ export interface TechTextProps {
   selection?: boolean;
   labels?: boolean;
   draggable?: boolean;
-  sweep?: boolean;
+  sweep?: boolean | 'once';
   speed?: number;
   align?: 'center' | 'left';
   className?: string;
@@ -48,6 +48,9 @@ const LABEL_FONT = '10px ui-monospace, SFMono-Regular, Menlo, Consolas, monospac
 const FALLOFF_STEPS = 8;
 const SPRING = 320;
 const DAMPING = 22;
+// Local addition, sweep="once": seconds to cross the whole word, then seconds to settle before the loop stops.
+const CROSSING = 1.8;
+const SETTLE = 0.6;
 // Room kept beside left-aligned text for the selection frame and specks.
 const EDGE = 20;
 
@@ -160,6 +163,7 @@ const TechText = ({
     let clock = 0;
     let pulse = 0;
     let placed = false;
+    let rest = 0;
     let dragging = -1;
     const pointer = { x: 0, y: 0, inside: false };
     const grab = { x: 0, y: 0 };
@@ -520,7 +524,10 @@ const TechText = ({
       last = now;
       const view = ensureLayout(s);
 
-      const sweeping = s.sweep && !reducedMotion && !pointer.inside && dragging < 0;
+      const free = !pointer.inside && dragging < 0;
+      const sweeping = s.sweep === true && !reducedMotion && free;
+      // One pass to the last glyph, where the lens parks until the pointer takes over.
+      const homing = s.sweep === 'once' && free;
       if (sweeping) clock += dt * s.speed;
       pulse += dt;
       let targetX = pointer.x;
@@ -529,12 +536,27 @@ const TechText = ({
         targetX = view.left + (view.right - view.left) * (0.5 - 0.5 * Math.cos(clock * 0.45));
         targetY = view.top + (view.bottom - view.top) * (0.45 + 0.1 * Math.sin(clock * 0.8));
       }
-      const active = pointer.inside || sweeping || dragging >= 0;
+      if (homing) {
+        const end = glyphs[glyphs.length - 1];
+        targetX = end ? (end.box.x1 + end.box.x2) / 2 : view.right;
+        targetY = (view.top + view.bottom) / 2;
+        if (!placed) {
+          lens.x = reducedMotion ? targetX : view.left;
+          lens.y = targetY;
+          placed = true;
+        }
+      }
+      const active = pointer.inside || sweeping || homing || dragging >= 0;
       if (active && !placed) {
         lens.x = targetX;
         lens.y = targetY;
       }
-      if (active) {
+      if (homing) {
+        const step = ((view.right - view.left) / CROSSING) * s.speed * dt;
+        lens.x += Math.max(-step, Math.min(step, targetX - lens.x));
+        lens.y = approach(lens.y, targetY, dt, 0.12);
+        rest = Math.abs(lens.x - targetX) < 0.5 && Math.abs(lens.y - targetY) < 0.5 ? rest + dt : 0;
+      } else if (active) {
         const lag = pointer.inside ? 0.05 : 0.22;
         lens.x = approach(lens.x, targetX, dt, lag);
         lens.y = approach(lens.y, targetY, dt, lag);
@@ -627,7 +649,8 @@ const TechText = ({
         moving ||
         Math.abs(presence - (s.reveal === 'area' && active && dragging < 0 ? 1 : 0)) > 0.002 ||
         (frame.alpha > 0.01 && frame.alpha < 0.99);
-      if ((active || settling) && visible && alive) raf = requestAnimationFrame(tick);
+      const parked = homing && rest > SETTLE;
+      if (((active && !parked) || settling) && visible && alive) raf = requestAnimationFrame(tick);
     };
 
     const wake = () => {
