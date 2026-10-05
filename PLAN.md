@@ -7,6 +7,7 @@ Dev server: `npm --prefix <worktree> run dev -- --port 5173 --strictPort`.
 ## Status (2026-10-04)
 
 Phases 1–5 are built on this branch. Phase 6 is not started.
+A polish pass on the hero, activity section and project gallery was also done on 2026-10-04 (see the decisions below).
 
 Still needed from Carter:
 
@@ -22,6 +23,15 @@ Decisions made while building (change if wrong):
 - Activity squares show both sources behind a toggle. Refresh is a local script (`scripts/activity.py`); the scheduled GitHub Action was not added.
 - Case pages built for: venture fund engagement (Topsail, client unnamed), Eight Faces, Companion, Balkanski, Locker. Shifts, AI LMS, and Knowledge Tree were not added.
 - LinkedIn posts use the site's own card, not the LinkedIn iframe.
+- Hero tagline is drawn with React Bits Tech Text. It sweeps left to right once in 5 seconds, parks on the period, follows the pointer on hover, then returns to the period.
+- Activity shows GitHub and Claude Code combined by default (each square takes the higher of the two levels). The source picker is a logo-only Glide Select under the grid; its menu opens downward. The captions and totals lines were removed at Carter's request, so the page no longer says what is counted or the data dates.
+- Lines of code, commits and repositories sit to the right of the grid, sized from the squares' height, right-aligned, all counting up.
+- Project gallery uses React Bits Refine Frame: closed cards show the coarsest block stage, the open card refines to the sharp cover. The frame's status chip is off because it sits where the project title is.
+
+Known and not fixed:
+
+- The activity squares and the numbers beside them shrink as weeks are added through the year.
+- The source picker's menu can run off the bottom of a short window.
 
 ## Phase 1 — Nav icons
 
