@@ -16,6 +16,8 @@ const SOURCES = {
   }
 } as const
 
+const SINCE = new Date(`${activity.since}T00:00:00`).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
+
 type Source = keyof typeof SOURCES
 
 export default function Activity() {
@@ -55,7 +57,7 @@ export default function Activity() {
           blockSize={13}
           blockMargin={4}
           fontSize={13}
-          labels={{ totalCount: `${total} ${unit} in the last year` }}
+          labels={{ totalCount: `${total} ${unit} since ${SINCE}` }}
           tooltips={{ activity: { text: a => `${a.count.toLocaleString('en-US')} ${unit} on ${a.date}` } }}
         />
       </div>

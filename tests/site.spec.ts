@@ -62,6 +62,7 @@ test('each tool links to its site and shows its name on focus', async ({ page })
 test('activity data has one entry per day with a 0-4 level', () => {
   for (const days of [activity.github, activity.claude]) {
     expect(days.length).toBeGreaterThan(1)
+    expect(days[0].date >= activity.since).toBe(true)
     for (const d of days) {
       expect(d.date).toMatch(/^\d{4}-\d{2}-\d{2}$/)
       expect(d.count).toBeGreaterThanOrEqual(0)
@@ -74,10 +75,10 @@ test('activity data has one entry per day with a 0-4 level', () => {
 test('activity grid switches between GitHub and Claude Code', async ({ page }) => {
   await page.goto('/')
   const total = (days: { count: number }[]) => days.reduce((sum, d) => sum + d.count, 0).toLocaleString('en-US')
-  await expect(page.getByText(`${total(activity.github)} contributions in the last year`)).toBeVisible()
+  await expect(page.getByText(`${total(activity.github)} contributions since January 2026`)).toBeVisible()
   await page.getByRole('button', { name: 'Claude Code' }).click()
   await expect(page.getByRole('button', { name: 'Claude Code' })).toHaveAttribute('aria-pressed', 'true')
-  await expect(page.getByText(`${total(activity.claude)} prompts in the last year`)).toBeVisible()
+  await expect(page.getByText(`${total(activity.claude)} prompts since January 2026`)).toBeVisible()
 })
 
 test('nav reaches the skills page and the tree selects a skill', async ({ page }) => {

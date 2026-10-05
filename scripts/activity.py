@@ -16,6 +16,8 @@ import subprocess
 
 OUT = pathlib.Path(__file__).resolve().parent.parent / "src" / "activity.json"
 HISTORY = pathlib.Path.home() / ".claude" / "history.jsonl"
+# Both grids start here.
+START = "2026-01-01"
 QUERY = "{viewer{contributionsCollection{contributionCalendar{weeks{contributionDays{date contributionCount}}}}}}"
 
 
@@ -31,7 +33,8 @@ def with_levels(days):
 def github():
     raw = subprocess.run(["gh", "api", "graphql", "-f", f"query={QUERY}"], capture_output=True, text=True, check=True)
     weeks = json.loads(raw.stdout)["data"]["viewer"]["contributionsCollection"]["contributionCalendar"]["weeks"]
-    return with_levels([{"date": d["date"], "count": d["contributionCount"]} for w in weeks for d in w["contributionDays"]])
+    days = [{"date": d["date"], "count": d["contributionCount"]} for w in weeks for d in w["contributionDays"]]
+    return with_levels([d for d in days if d["date"] >= START])
 
 
 def claude(start, end):
@@ -58,6 +61,7 @@ claude_days, claude_since, claude_as_of = claude(gh_days[0]["date"], gh_days[-1]
 OUT.write_text(
     json.dumps(
         {
+            "since": START,
             "asOf": datetime.date.today().isoformat(),
             "claudeSince": claude_since,
             "claudeAsOf": claude_as_of,
