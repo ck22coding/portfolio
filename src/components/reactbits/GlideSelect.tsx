@@ -25,6 +25,8 @@ export interface GlideSelectProps {
   radius?: number;
   menuWidth?: number;
   placement?: 'top' | 'bottom';
+  /** Local addition: set false to keep the menu on its placement side even when it runs past the viewport. */
+  flip?: boolean;
   align?: 'left' | 'right';
   popDuration?: number;
   glideDuration?: number;
@@ -74,6 +76,7 @@ const GlideSelect: React.FC<GlideSelectProps> = ({
   radius = 10,
   menuWidth = 176,
   placement = 'bottom',
+  flip = true,
   align = 'left',
   popDuration = 180,
   glideDuration = 220,
@@ -109,7 +112,9 @@ const GlideSelect: React.FC<GlideSelectProps> = ({
     const r = root.getBoundingClientRect();
     const need = el.offsetHeight + MENU_GAP;
     setSide(
-      placement === 'bottom' && r.bottom + need > window.innerHeight
+      !flip
+        ? placement
+        : placement === 'bottom' && r.bottom + need > window.innerHeight
         ? 'top'
         : placement === 'top' && r.top - need < 0
           ? 'bottom'
